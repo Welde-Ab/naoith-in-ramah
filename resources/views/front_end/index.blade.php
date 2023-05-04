@@ -79,7 +79,7 @@
                         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                             <div class="card">
                                 <div class="card-img">
-                                    <img src="assets/img/storage-service.jpg" alt="" class="img-fluid">
+                                    <img src="{{asset('front_end/assets/img/storage-service.jpg')}}" class="img-fluid" alt="">
                                 </div>
                                 <h3><a href="service-details.html" class="stretched-link">Sermons (Change Picture)</a></h3>
                                 <p>In our church we regularly learn the word of God for instruction, encouragement and strengtheining our faith.</p>
@@ -89,7 +89,7 @@
                         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                             <div class="card">
                                 <div class="card-img">
-                                    <img src="assets/img/logistics-service.jpg" alt="" class="img-fluid">
+                                    <img src="{{asset('front_end/assets/img/logistics-service.jpg')}}" class="img-fluid" alt="">
                                 </div>
                                 <h3><a href="service-details.html" class="stretched-link">Bible Study (Change Picture)</a></h3>
                                 <p>We throughly go through the different books of the bible by understanding their historical and literary context to find application in our lives.</p>
@@ -99,7 +99,7 @@
                         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                             <div class="card">
                                 <div class="card-img">
-                                    <img src="assets/img/cargo-service.jpg" alt="" class="img-fluid">
+                                    <img src="{{asset('front_end/assets/img/cargo-service.jpg')}}" class="img-fluid" alt="">
                                 </div>
                                 <h3><a href="service-details.html" class="stretched-link">Worship (Change Picture)</a></h3>
                                 <p>Worshiping the Lord our God through music and hymns.</p>
@@ -109,7 +109,7 @@
                         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
                             <div class="card">
                                 <div class="card-img">
-                                    <img src="assets/img/trucking-service.jpg" alt="" class="img-fluid">
+                                    <img src="{{asset('front_end/assets/img/trucking-service.jpg')}}" class="img-fluid" alt="">
                                 </div>
                                 <h3><a href="service-details.html" class="stretched-link">Prayer (Change Picture)</a></h3>
                                 <p>Coming to the throne of God to commune with our God and find Grace for our daily lives.</p>
@@ -119,7 +119,7 @@
                         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
                             <div class="card">
                                 <div class="card-img">
-                                    <img src="assets/img/packaging-service.jpg" alt="" class="img-fluid">
+                                    <img src="{{asset('front_end/assets/img/packaging-service.jpg')}}" class="img-fluid" alt="">
                                 </div>
                                 <h3><a href="service-details.html" class="stretched-link">Expositions (Change Picture)</a></h3>
                                 <p> Expositions on Christian living, discipleship, etc.</p>
@@ -129,7 +129,7 @@
                         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
                             <div class="card">
                                 <div class="card-img">
-                                    <img src="assets/img/warehousing-service.jpg" alt="" class="img-fluid">
+                                    <img src="{{asset('front_end/assets/img/warehousing-service.jpg')}}" class="img-fluid" alt="">
                                 </div>
                                 <h3><a href="service-details.html" class="stretched-link">Other Collections</a></h3>
                                 <p> Special Church events, birthdays, stories of our church members</p>
@@ -212,52 +212,52 @@
 
                     <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
 
+                        <div class="section-header">
+                            <span>Our Programs</span>
+                            <h2>Our Programs</h2>
+
+                        </div>
+
                         <div class="col-md-5">
-                            <img src="assets/img/features-1.jpg" class="img-fluid" alt="">
+                            <img src = "{{asset('front_end/assets/img/features-1.jpg')}}" class="img-fluid" alt="">
                         </div>
                         <div class="col-md-7">
-                            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+                            <h3>Sunday we have our regular worship service.</h3>
                             <p class="fst-italic">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                magna aliqua.
+                                We cherish our Sunday because it's the day where we take a break from our busy lives to come together face to face and commune
                             </p>
                             <ul>
-                                <li><i class="bi bi-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                                <li><i class="bi bi-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                                <li><i class="bi bi-check"></i> Ullam est qui quos consequatur eos accusamus.</li>
+                                <li><i class="bi bi-check"></i> We pray together believing that God will provide.</li>
+                                <li><i class="bi bi-check"></i> We worship God through music and hymns.</li>
+                                <li><i class="bi bi-check"></i> We hear to the Word of God.</li>
                             </ul>
                         </div>
                     </div><!-- Features Item -->
 
                     <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
                         <div class="col-md-5 order-1 order-md-2">
-                            <img src="assets/img/features-2.jpg" class="img-fluid" alt="">
+                            <img src = "{{asset('front_end/assets/img/features-2.jpg')}}" class="img-fluid" alt="">
                         </div>
                         <div class="col-md-7 order-2 order-md-1">
-                            <h3>Corporis temporibus maiores provident</h3>
+                            <h3>Every Tuesday we have group prayer </h3>
                             <p class="fst-italic">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                magna aliqua.
-                            </p>
-                            <p>
-                                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                culpa qui officia deserunt mollit anim id est laborum
+                                On Tuesdays we take time to seek God through prayer. We pray for each other and for our country, for Japan and seek the will of God in our lives.
+                                We also share a quick word of encouragement and instruction from the bible.
                             </p>
                         </div>
                     </div><!-- Features Item -->
 
                     <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
                         <div class="col-md-5">
-                            <img src="assets/img/features-3.jpg" class="img-fluid" alt="">
+                            <img src = "{{asset('front_end/assets/img/features-3.jpg')}}" class="img-fluid" alt="">
                         </div>
                         <div class="col-md-7">
-                            <h3>Sunt consequatur ad ut est nulla consectetur reiciendis animi voluptas</h3>
-                            <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit aut quia voluptatem hic voluptas dolor doloremque.</p>
+                            <h3>Every Saturday we have our Bible Study Session.</h3>
+                            <p>On Saturdays we thoroughly explore a book in the Bible and discuss the what is written therein.</p>
                             <ul>
-                                <li><i class="bi bi-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                                <li><i class="bi bi-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                                <li><i class="bi bi-check"></i> Facilis ut et voluptatem aperiam. Autem soluta ad fugiat.</li>
+                                <li><i class="bi bi-check"></i> First we take the other days of the week to study and prepare on our own</li>
+                                <li><i class="bi bi-check"></i> When we gather together we share with one another what we have meditated upon</li>
+                                <li><i class="bi bi-check"></i> Led by our pastor we will refine and deepen our understanding of the passages </li>
                             </ul>
                         </div>
                     </div><!-- Features Item -->
@@ -267,15 +267,13 @@
                             <img src = "{{asset('front_end/assets/img/features-4.jpg')}}" class="img-fluid" alt="">
                         </div>
                         <div class="col-md-7 order-2 order-md-1">
-                            <h3>Quas et necessitatibus eaque impedit ipsum animi consequatur incidunt in</h3>
+                            <h3>Birthdays, wedding anniversaries, graduations, welcome and farewell parties</h3>
                             <p class="fst-italic">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                magna aliqua.
+                                As brothers and sisters in Christ we strengthen our bond through social events.
                             </p>
                             <p>
-                                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                culpa qui officia deserunt mollit anim id est laborum
+                                Standing with each other in happy times and sad we strive to fulfill the commandment that Christ our Lord gave us to
+                                love one another as He has Loved us.
                             </p>
                         </div>
                     </div><!-- Features Item -->
