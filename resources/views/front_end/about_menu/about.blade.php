@@ -20,7 +20,7 @@
                 <div class="row d-flex justify-content-center">
                     <div class="col-lg-6 text-center">
                         <h2>About</h2>
-                        <p>Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+                        <p> We are Ethiopian Christians gathered together in the name of our Lord and Savior Jesus Christ. Here in Japan we commune together to strengthen each other in our faith and serve one another as members of the body of Christ. </p>
                     </div>
                 </div>
             </div>
@@ -42,10 +42,7 @@
         <div class="container" data-aos="fade-up">
 
             <div class="row gy-4">
-                <div class="col-lg-6 position-relative align-self-start order-lg-last order-first">
-                    <img src="assets/img/about.jpg" class="img-fluid" alt="">
-                    <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
-                </div>
+
                 <div class="col-lg-6 content order-last  order-lg-first">
                     <h3>About Us</h3>
                     <p>

@@ -13,7 +13,7 @@ class FrontController extends Controller
 
     public function about()
     {
-        return view('front_end.about');
+        return view('front_end.about_menu.about');
     }
 
     public function gallery()

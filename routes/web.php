@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(FrontController::class)->group(function () {
     Route::get('/', 'index') -> name('home');
-    Route::get('/about', 'about') -> name('about');
+    Route::get('/about_menu/about', 'about') -> name('about');
     Route::get('/gallery', 'gallery') -> name('gallery');
     Route::get('/worships-songs', 'worships') -> name('worships');
     Route::get('/contact', 'contact') -> name('contact');
