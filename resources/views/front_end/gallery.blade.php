@@ -17,14 +17,20 @@
 
     <h1>Bootstrap 3 Gallery</h1>
 
-    <p class="page-description text-center">Grid Layout With Zoom Effect</p>
+    @php
+        $picture = App\Models\Gallery::find(1);
+
+    @endphp
+
+    <p class="page-description text-center">{{$picture->title}}</p>
 
     <div class="tz-gallery">
 
         <div class="row">
             <div class="col-sm-6 col-md-4">
                 <a class="lightbox" href="{{asset('/freebie-4-bootstrap-gallery-templates/images/park.jpg')}}">
-                    <img src="{{asset('/freebie-4-bootstrap-gallery-templates/images/park.jpg')}}" alt="Park">
+                    <img src="{{ $picture->picture  }}" alt="">
+{{--                    <img src="{{ $picture->picture  }}" alt="">--}}
                 </a>
             </div>
             <div class="col-sm-6 col-md-4">

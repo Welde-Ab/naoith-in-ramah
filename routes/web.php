@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\GalleryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -47,7 +49,49 @@ Route::controller(FrontController::class)->group(function () {
 //});
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('admin.index');
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+Route::middleware(['auth'])->group(function () {
+    Route::controller(AdminController::class)->group(function () {
+//    Route::get('/', 'HomeMain')->name('home');
+        Route::get('/admin/logout', 'destroy')->name('admin.logout');
+        Route::get('/admin/profile', 'Profile')->name('admin.profile');
+        Route::get('/edit/profile', 'EditProfile')->name('edit.profile');
+        Route::post('/store/profile', 'StoreProfile')->name('store.profile');
+        Route::get('/change/password', 'ChangePassword')->name('change.password');
+        Route::post('/update/password', 'UpdatePassword')->name('update.password');
+        //   Route::get('/contact', 'ContactMethod')->name('contact.page');
+    });
+});
+//home slide all route
+Route::controller(GalleryController::class)->group(function () {
+
+    Route::get('/home/gallery', 'HomeGallery')->name('home.gallery');
+    Route::post('/update/gallery', 'UpdateGallery')->name('update.gallery');
+//    Route::get('/gallery/page', 'HomeGallery')->name('gallery.page');
+//    Route::get('/gallery/multi/image', 'galleryMultiImage')->name('gallery.multi.image');
+//
+//    Route::post('/store/multi/image', 'StoreGalleryMulti')->name('store.multi.image');
+//    Route::get('/all/multi/image', 'AllMultiImage')->name('all.gallery.image');
+
+
+});
+//about all route
+//Route::controller(AboutController::class)->group(function () {
+
+//    Route::get('/gallery/page', 'AboutPage')->name('gallery.page');
+////    Route::post('/update/about', 'UpdateAbout')->name('update.about');
+////   Route::get('/gallery/', 'Home')->name('home.about');
+//
+//    Route::get('/gallery/multi/image', 'galleryMultiImage')->name('gallery.multi.image');
+//
+//    Route::post('/store/multi/image', 'UpdateGallery')->name('store.multi.image');
+//    Route::get('/all/multi/image', 'AllMultiImage')->name('all.gallery.image');
+//    Route::get('/edit/multi/image/{id}', 'EditMultiImage')->name('edit.multi.image');
+//    Route::post('/update/multi/image', 'UpdateMultiImage')->name('update.multi.image');
+//    Route::get('/delete/multi/image/{id}', 'DeleteMultiImage')->name('delete.multi.image');
+//});
+
