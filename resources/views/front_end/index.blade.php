@@ -167,7 +167,7 @@
                                     <i class="bi bi-diagram-3"></i>
                                     <div>
                                         <h5>Who we are?</h5>
-                                        <p>How the church came about to be and all - include a hyperlink to the full topic in about.html</p>
+                                        <p> It has been 20 years since Naoith in Ramah came to be. How the church came about to be and all - include a hyperlink to the full topic in about.html</p>
                                     </div>
                                 </li>
                                 <li data-aos="fade-up" data-aos-delay="200">

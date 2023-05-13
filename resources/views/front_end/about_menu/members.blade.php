@@ -3,7 +3,7 @@
 @section('main')
 
     @section('title')
-        Naioth in Ramah | About
+        Naioth in Ramah | Members
     @endsection
 
     @php
@@ -19,8 +19,10 @@
             <div class="container position-relative">
                 <div class="row d-flex justify-content-center">
                     <div class="col-lg-6 text-center">
-                        <h2>About</h2>
-                        <p> We are Ethiopian Christians gathered together in the name of our Lord and Savior Jesus Christ. Here in Japan we commune together to strengthen each other in our faith and serve one another as members of the body of Christ. </p>
+                        <h2>Members</h2>
+                        <p> Over the span of 20 years our church has had several beloved members who ministered the body of Christ. They faith
+                            and the grace of God through them has made Naoith in Ramah what it is today.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -37,53 +39,13 @@
         </nav>
     </div><!-- End Breadcrumbs -->
 
-    <!-- ======= About Us Section ======= -->
-    <section id="about" class="about">
-        <div class="container" data-aos="fade-up">
-
-            <div class="row gy-4">
-
-                <div class="col-lg-6 content order-last  order-lg-first">
-                    <h3>About Us</h3>
-                    <p>
-                        Dolor iure expedita id fuga asperiores qui sunt consequatur minima. Quidem voluptas deleniti. Sit quia molestiae quia quas qui magnam itaque veritatis dolores. Corrupti totam ut eius incidunt reiciendis veritatis asperiores placeat.
-                    </p>
-                    <ul>
-                        <li data-aos="fade-up" data-aos-delay="100">
-                            <i class="bi bi-diagram-3"></i>
-                            <div>
-                                <h5>Ullamco laboris nisi ut aliquip consequat</h5>
-                                <p>Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade</p>
-                            </div>
-                        </li>
-                        <li data-aos="fade-up" data-aos-delay="200">
-                            <i class="bi bi-fullscreen-exit"></i>
-                            <div>
-                                <h5>Magnam soluta odio exercitationem reprehenderi</h5>
-                                <p>Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna pasata redi</p>
-                            </div>
-                        </li>
-                        <li data-aos="fade-up" data-aos-delay="300">
-                            <i class="bi bi-broadcast"></i>
-                            <div>
-                                <h5>Voluptatem et qui exercitationem</h5>
-                                <p>Et velit et eos maiores est tempora et quos dolorem autem tempora incidunt maxime veniam</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-    </section><!-- End About Us Section -->
-
-    <!-- ======= Our Team Section ======= -->
+    <!-- ======= Members ======= -->
     <section id="team" class="team pt-0">
         <div class="container" data-aos="fade-up">
 
             <div class="section-header">
-                <span>Our Team</span>
-                <h2>Our Team</h2>
+                <span>Members</span>
+                <h2>Members</h2>
 
             </div>
 
@@ -91,12 +53,12 @@
 
                 <div class="col-lg-4 col-md-6 d-flex">
                     <div class="member">
-                        <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                        <img src="{{asset('front_end/assets/img/members/pa_kidus.jpg')}}" class="img-fluid" alt="">
                         <div class="member-content">
-                            <h4>Walter White</h4>
-                            <span>Web Development</span>
+                            <h4>Kidus Tsegaye</h4>
+                            <span> Kidus Tsegaye </span>
                             <p>
-                                Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                                Kidus Tsegaye has been ministering the church as the lead pastor for over 10 years now.
                             </p>
                             <div class="social">
                                 <a href=""><i class="bi bi-twitter"></i></a>
@@ -110,12 +72,13 @@
 
                 <div class="col-lg-4 col-md-6 d-flex">
                     <div class="member">
-                        <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                        <img src="{{asset('front_end/assets/img/members/tsion.jpg')}}" class="img-fluid" alt="">
                         <div class="member-content">
-                            <h4>Sarah Jhinson</h4>
-                            <span>Marketing</span>
+                            <h4>Tsion Ambachew</h4>
+                            <span> Tsion Ambachew </span>
                             <p>
-                                Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
+                                Tsion Ambachew has serving at Naoith in Ramah for over ten years now. She is the pastor's wife and
+                                communes with the church.
                             </p>
                             <div class="social">
                                 <a href=""><i class="bi bi-twitter"></i></a>
@@ -129,12 +92,72 @@
 
                 <div class="col-lg-4 col-md-6 d-flex">
                     <div class="member">
-                        <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+                        <img src="{{asset('front_end/assets/img/members/salome.jpg')}}" class="img-fluid" alt="">
                         <div class="member-content">
-                            <h4>William Anderson</h4>
-                            <span>Content</span>
+                            <h4>Salome Werede</h4>
+                            <span> Salome Werede </span>
                             <p>
-                                Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
+                                Salome has been with Naoith in Ramah for over 15 years now. She has faithfully served the saints
+                                at Naioth in Ramah and actively conducts bible study sessions and much more.
+                            </p>
+                            <div class="social">
+                                <a href=""><i class="bi bi-twitter"></i></a>
+                                <a href=""><i class="bi bi-facebook"></i></a>
+                                <a href=""><i class="bi bi-instagram"></i></a>
+                                <a href=""><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End Team Member -->
+
+                <div class="col-lg-4 col-md-6 d-flex">
+                    <div class="member">
+                        <img src="{{asset('front_end/assets/img/members/helen.jpg')}}" class="img-fluid" alt="">
+                        <div class="member-content">
+                            <h4>Helenbirhanu WoldeMariam</h4>
+                            <span> Helenbirhanu WoldeMariam </span>
+                            <p>
+                                Helen has been with Naoith in Ramah for over 10 years. She has served and ministered the Lord and his saints
+                                through prayer, hymns, and bible studies.
+                            </p>
+                            <div class="social">
+                                <a href=""><i class="bi bi-twitter"></i></a>
+                                <a href=""><i class="bi bi-facebook"></i></a>
+                                <a href=""><i class="bi bi-instagram"></i></a>
+                                <a href=""><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End Team Member -->
+
+                <div class="col-lg-4 col-md-6 d-flex">
+                    <div class="member">
+                        <img src="{{asset('front_end/assets/img/members/gelaye.png')}}" class="img-fluid" alt="">
+                        <div class="member-content">
+                            <h4> Gelaye </h4>
+                            <span> Gelaye </span>
+                            <p>
+                                Gelaye has been a beloved member of Naoith in Ramah. Known for her cheerful attitude she has been serving the
+                                saints of the Lord for over 10 years now.
+                            </p>
+                            <div class="social">
+                                <a href=""><i class="bi bi-twitter"></i></a>
+                                <a href=""><i class="bi bi-facebook"></i></a>
+                                <a href=""><i class="bi bi-instagram"></i></a>
+                                <a href=""><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End Team Member -->
+
+                <div class="col-lg-4 col-md-6 d-flex">
+                    <div class="member">
+                        <img src="{{asset('front_end/assets/img/members/bruke.png')}}" class="img-fluid" alt="">
+                        <div class="member-content">
+                            <h4> Bruk Tadesse </h4>
+                            <span> Bruk Tadesse </span>
+                            <p>
+                                Bruk has been with Naoith in Ramah for over 10 years now. She has been a beloved and faithful sister to Naoithians.
                             </p>
                             <div class="social">
                                 <a href=""><i class="bi bi-twitter"></i></a>
@@ -244,100 +267,6 @@
 
         </div>
     </section><!-- End Testimonials Section -->
-
-    <!-- ======= Frequently Asked Questions Section ======= -->
-    <section id="faq" class="faq">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-header">
-                <span>Frequently Asked Questions</span>
-                <h2>Frequently Asked Questions</h2>
-
-            </div>
-
-            <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="200">
-                <div class="col-lg-10">
-
-                    <div class="accordion accordion-flush" id="faqlist">
-
-                        <div class="accordion-item">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
-                                    <i class="bi bi-question-circle question-icon"></i>
-                                    Non consectetur a erat nam at lectus urna duis?
-                                </button>
-                            </h3>
-                            <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                                <div class="accordion-body">
-                                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-                                </div>
-                            </div>
-                        </div><!-- # Faq item-->
-
-                        <div class="accordion-item">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
-                                    <i class="bi bi-question-circle question-icon"></i>
-                                    Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
-                                </button>
-                            </h3>
-                            <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                                <div class="accordion-body">
-                                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                                </div>
-                            </div>
-                        </div><!-- # Faq item-->
-
-                        <div class="accordion-item">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
-                                    <i class="bi bi-question-circle question-icon"></i>
-                                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?
-                                </button>
-                            </h3>
-                            <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                                <div class="accordion-body">
-                                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-                                </div>
-                            </div>
-                        </div><!-- # Faq item-->
-
-                        <div class="accordion-item">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4">
-                                    <i class="bi bi-question-circle question-icon"></i>
-                                    Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
-                                </button>
-                            </h3>
-                            <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                                <div class="accordion-body">
-                                    <i class="bi bi-question-circle question-icon"></i>
-                                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                                </div>
-                            </div>
-                        </div><!-- # Faq item-->
-
-                        <div class="accordion-item">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-5">
-                                    <i class="bi bi-question-circle question-icon"></i>
-                                    Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
-                                </button>
-                            </h3>
-                            <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                                <div class="accordion-body">
-                                    Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
-                                </div>
-                            </div>
-                        </div><!-- # Faq item-->
-
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </section><!-- End Frequently Asked Questions Section -->
 
 </main><!-- End #main -->
 

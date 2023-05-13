@@ -16,10 +16,31 @@ class FrontController extends Controller
         return view('front_end.about_menu.about');
     }
 
+    public function believe()
+    {
+        return view('front_end.about_menu.believe');
+    }
+
+    public function members()
+    {
+        return view('front_end.about_menu.members');
+    }
+
+    public function testimonies()
+    {
+        return view('front_end.about_menu.testimonies');
+    }
+
     public function gallery()
     {
         return view('front_end.gallery');
     }
+
+    public function gallery_categories()
+    {
+        return view('front_end.gallery_categories');
+    }
+
 
     public function worships()
     {
@@ -48,7 +69,7 @@ class FrontController extends Controller
 
     public function shorts()
     {
-        return view('front_end.resources_menu.teachings.short');
+        return view('front_end.resources_menu.teachings.shorts');
     }
 
     public function events()
