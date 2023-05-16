@@ -12,24 +12,29 @@
                         <div class="card-body">
 
                             <h4 class="card-title">Gallery  </h4>
-                            @if($homegallery)
-                                @foreach($homegallery as $post)
-                                    <tr>
-                                        <td></td>
+{{--                            @if($homegallery)--}}
+{{--                                @foreach($homegallery as $post)--}}
+{{--                                    <tr>--}}
+{{--                                        <td></td>--}}
 {{--                                        <td>{{$post->id}}</td>--}}
-                                        <td>{{$post->title}}</td>
-                                        <td>{{$post->category_id}}</td>
-                                        <td>{{$post->photo_id}}</td>
-                                        <td>{{$post->title}}</td>
-                                        <td>{{$post->body}}</td>
-                                        <td>{{$post->created_at->diffForhumans()}}</td>
-                                        <td>{{$post->updated_at}}</td>
+{{--                                        <td>{{$post->title}}</td>--}}
+{{--                                        <td>{{$post->category_id}}</td>--}}
+{{--                                        <td>{{$post->photo_id}}</td>--}}
+{{--                                        <td>{{$post->title}}</td>--}}
+{{--                                        <td>{{$post->body}}</td>--}}
+{{--                                        <td>{{$post->created_at->diffForhumans()}}</td>--}}
+{{--                                        <td>{{$post->updated_at}}</td>--}}
 
-                                        </td>
-                                    </tr>
-                                @endforeach
-                            @endif
+{{--                                        </td>--}}
+{{--                                    </tr>--}}
+{{--                                @endforeach--}}
+{{--                            @endif--}}
 
+                            <h1>Galleries</h1>
+                            @foreach($galleries as $gallery)
+                                <h2>{{ $gallery->title }}</h2>
+                                <img src="{{ $gallery->image }}" alt="{{ $gallery->title }}" width="200" height="200">
+                            @endforeach
 {{--                            <form method="post" action="{{ route('update.gallery') }}" enctype="multipart/form-data">--}}
 
 {{--                                @csrf--}}

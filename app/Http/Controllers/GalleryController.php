@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Gallery;
+use App\Models\Gallery_Categories;
 use App\Models\MultiImage;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
@@ -11,9 +12,28 @@ use Intervention\Image\Facades\Image;
 class GalleryController extends Controller
 {
     //
+    public function index()
+    {
+        $galleries = Gallery::all();
+        return view('admin.gallery.gallery_all', compact('galleries'));
+
+    }
+    public function create()
+    {
+        $categories = Gallery_Categories::all();
+
+        return view('admin.gallery.create_gallery', compact('categories'));
+    }
+
+    public function store(Request $request)
+    {
+        $gallery = Gallery::create($request->all());
+
+        return redirect()->route('admin.gallery.gallery_all')->with('success', 'Gallery created successfully.');
+    }
     public function HomeGallery(){
         $homegallery = Gallery::find(1);
-        return view('admin.gallery.gallery_all',compact('homegallery'));
+        return view('admin.gallery.gallery_categories',compact('homegallery'));
 
     }
 

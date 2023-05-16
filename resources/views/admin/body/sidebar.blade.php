@@ -31,9 +31,14 @@
                         <span>gallery Setup</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{route('home.gallery')}}">gallery</a></li>
+{{--                        <li><a href="{{route('home.gallery')}}">gallery</a></li>--}}
 
                     </ul>
+                    <ul class="sub-menu" aria-expanded="false">
+{{--                        <li><a href="{{route('home.create')}}">create</a></li>--}}
+
+                    </ul>
+
                 </li>
 
                <li>
