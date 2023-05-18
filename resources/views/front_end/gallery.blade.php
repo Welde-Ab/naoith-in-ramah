@@ -3,7 +3,7 @@
 @section('main')
 
     @section('title')
-        Naioth in Ramah | Gallery_Categories
+        Naioth in Ramah | Gallery
     @endsection
 
     @php
@@ -19,7 +19,7 @@
                 <div class="container position-relative">
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-6 text-center">
-                            <h2> Gallery Categories </h2>
+                            <h2> Gallery </h2>
                             <p> We are Ethiopian Christians gathered together in the name of our Lord and Savior Jesus Christ. Here in Japan we commune together to strengthen each other in our faith and serve one another as members of the body of Christ. </p>
                         </div>
                     </div>
@@ -31,7 +31,7 @@
                         <li> <a href ="{{route('home')}}"> Home </a> </li>
                         <!-- <li><a href="{{url('/')}}">Home</a></li> -->
                         <!-- a href ="{{ URL::to('/contact')}}">  contact </a> -->
-                        <li>Gallery Categories</li>
+                        <li> Gallery </li>
                     </ol>
                 </div>
             </nav>
@@ -44,7 +44,6 @@
                 <div class="section-header">
                     <span>Church Ministry</span>
                     <h2>Church Ministry</h2>
-
                 </div>
 
                 <div class="row gy-4">
