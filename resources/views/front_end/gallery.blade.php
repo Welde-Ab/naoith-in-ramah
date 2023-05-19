@@ -13,79 +13,38 @@
 </head>
 <body>
 
-{{--<div class="container gallery-container">--}}
+@php
+$route = Route::current()->getName();
+@endphp
+<div class="container gallery-container">
+    @foreach ($category as $catego)
+        <h1>{{ $catego->name }}</h1>
 
-{{--    <h1>Bootstrap 3 Gallery</h1>--}}
 
-{{--    @php--}}
-{{--        $picture = App\Models\Gallery::find(1);--}}
+    @endforeach
 
-{{--    @endphp--}}
 
-{{--    <p class="page-description text-center">{{$picture->title}}</p>--}}
 
-{{--    <div class="tz-gallery">--}}
 
-{{--        <div class="row">--}}
-{{--            <div class="col-sm-6 col-md-4">--}}
-{{--                <a class="lightbox" href="{{asset('/freebie-4-bootstrap-gallery-templates/images/park.jpg')}}">--}}
-{{--                    <img src="{{ $picture->picture  }}" alt="">--}}
-{{--                    <img src="{{ $picture->picture  }}" alt="">--}}
-{{--                </a>--}}
-{{--            </div>--}}
-{{--            <div class="col-sm-6 col-md-4">--}}
-{{--                <a class="lightbox" href="{{asset('/freebie-4-bootstrap-gallery-templates/images/bridge.jpg')}}">--}}
-{{--                    <img src="{{asset('/freebie-4-bootstrap-gallery-templates/images/bridge.jpg')}}" alt="Park">--}}
-{{--                </a>--}}
-{{--            </div>--}}
-{{--            <div class="col-sm-12 col-md-4">--}}
-{{--                <a class="lightbox" href="{{asset('/freebie-4-bootstrap-gallery-templates/images/tunnel.jpg')}}">--}}
-{{--                    <img src="{{asset('/freebie-4-bootstrap-gallery-templates/images/tunnel.jpg')}}" alt="Park">--}}
-{{--                </a>--}}
-{{--            </div>--}}
-{{--            <div class="col-sm-6 col-md-4">--}}
-{{--                <a class="lightbox" href="{{asset('/freebie-4-bootstrap-gallery-templates/images/coast.jpg')}}">--}}
-{{--                    <img src="{{asset('/freebie-4-bootstrap-gallery-templates/images/coast.jpg')}}" alt="Park">--}}
-{{--                </a>--}}
-{{--            </div>--}}
-{{--            <div class="col-sm-6 col-md-4">--}}
-{{--                <a class="lightbox" href="{{asset('/freebie-4-bootstrap-gallery-templates/images/rails.jpg')}}">--}}
-{{--                    <img src="{{asset('/freebie-4-bootstrap-gallery-templates/images/rails.jpg')}}" alt="Park">--}}
-{{--                </a>--}}
-{{--            </div>--}}
-{{--            <div class="col-sm-6 col-md-4">--}}
-{{--                <a class="lightbox" href="{{asset('/freebie-4-bootstrap-gallery-templates/images/traffic.jpg')}}">--}}
-{{--                    <img src="{{asset('/freebie-4-bootstrap-gallery-templates/images/traffic.jpg')}}" alt="Park">--}}
-{{--                </a>--}}
-{{--            </div>--}}
-{{--            <div class="col-sm-6 col-md-4">--}}
-{{--                <a class="lightbox" href="{{asset('/freebie-4-bootstrap-gallery-templates/images/rocks.jpg')}}">--}}
-{{--                    <img src="{{asset('/freebie-4-bootstrap-gallery-templates/images/rocks.jpg')}}" alt="Park">--}}
-{{--                </a>--}}
-{{--            </div>--}}
-{{--            <div class="col-sm-6 col-md-4">--}}
-{{--                <a class="lightbox" href="{{asset('/freebie-4-bootstrap-gallery-templates/images/rocks.jpg')}}">--}}
-{{--                    <img src="{{asset('/freebie-4-bootstrap-gallery-templates/images/rocks.jpg')}}" alt="Park">--}}
-{{--                </a>--}}
-{{--            </div>--}}
-{{--            <div class="col-sm-6 col-md-4">--}}
-{{--                <a class="lightbox" href="{{asset('/freebie-4-bootstrap-gallery-templates/images/rocks.jpg')}}">--}}
-{{--                    <img src="{{asset('/freebie-4-bootstrap-gallery-templates/images/rocks.jpg')}}" alt="Park">--}}
-{{--                </a>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</div>--}}
 
-@foreach ($category as $categor)
-    <h2>{{ $categor->name }}</h2>
 
-    <ul>
-        @foreach ($categor->galleries as $gallery)
-            <li>{{ $gallery->name }}</li>
-        @endforeach
-    </ul>
-@endforeach
+    <div class="tz-gallery">
+            @foreach ($category as $categor)
+                    @foreach ($categor->galleries as $gallery)
+
+        <div class="col-sm-6 col-md-4">
+            <a class="lightbox" href="{{asset($gallery->images)}}">
+                <img src="{{asset($gallery->images)}}" alt="Park">
+            </a>
+        </div>
+
+                    @endforeach
+
+            @endforeach
+
+</div>
+
+
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>

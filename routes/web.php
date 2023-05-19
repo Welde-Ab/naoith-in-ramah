@@ -30,7 +30,8 @@ Route::controller(FrontController::class)->group(function () {
     Route::get('/gallery', 'gallery') -> name('gallery');
     Route::get('/worships-songs', 'worships') -> name('worships');
     Route::get('/contact', 'contact') -> name('contact');
-    Route::get('/gallery/category/{id}','category')->name('gallery.category');
+    Route::get('/gallery/category/{category_id}','category')->name('gallery.category');
+
 });
 
 //Route::get('/about', function () {
@@ -107,13 +108,22 @@ Route::controller(GalleryController::class)->group(function () {
 //    Route::get('/delete/multi/image/{id}', 'DeleteMultiImage')->name('delete.multi.image');
 //});
 
-Route::get('/categories/create', [CategoryController::class, 'create'])->name('categories.create');
+Route::get('/categories/create', [CategoryController::class, 'create'])->name('gallery.categories.create');
 Route::post('/categories', [CategoryController::class, 'store'])->name('categories.store');
 Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
+Route::get('/edit/categories/{id}', [CategoryController::class, 'EditCategory'])->name('edit.category');
+Route::post('/update/categories', [CategoryController::class, 'UpdateCategory'])->name('update.category');
+Route::get('/delete/categories/{id}', [CategoryController::class, 'DeleteCategory'])->name('delete.category');
 
-Route::get('/galleries/create', [GalleryController::class, 'create'])->name('galleries.create');
-Route::post('/galleries', [GalleryController::class, 'store'])->name('galleries.store');
 
-Route::get('/images/create', [ImageController::class, 'create'])->name('images.create');
-Route::post('/images', [ImageController::class, 'store'])->name('images.store');
+
+Route::get('/galleries/create', [GalleryController::class, 'create'])->name('images.upload');
+Route::post('/galleries', [GalleryController::class, 'StoreMultiImage'])->name('images.store');
+Route::post('/galleries/all', [GalleryController::class, 'AllImages'])->name('all.images');
+//Route::post('/galleries', [GalleryController::class, 'store'])->name('galleries.store');
+//Route::get('/allimages', [GalleryController::class, 'index'])->name('categories.index');
+
+
+//Route::get('/images/create', [ImageController::class, 'create'])->name('images.create');
+//Route::post('/images', [ImageController::class, 'store'])->name('images.store');
 

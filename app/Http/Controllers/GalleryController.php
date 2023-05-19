@@ -8,22 +8,52 @@ use App\Models\Gallery_Categories;
 use App\Models\MultiImage;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
-
+use Carbon\Carbon;
 class GalleryController extends Controller
 {
     //
     public function index()
     {
         $galleries = Gallery::all();
-        return view('admin.gallery.gallery_all', compact('galleries'));
+        return view('admin.gallery_images.index', compact('galleries'));
 
     }
-    public function create()
-    {
-        $categories = Gallery_Categories::all();
+//    public function create()
+//    {
+////        $categories = Gallery_Categories::all();
+//
+//        return view('admin.gallery.create_gallery', compact('categories'));
+//    }
+    public function StoreMultiImage(Request $request){
 
-        return view('admin.gallery.create_gallery', compact('categories'));
-    }
+        $image = $request->file('images');
+
+        foreach ($image as $multi_image) {
+
+            $name_gen = hexdec(uniqid()).'.'.$multi_image->getClientOriginalExtension();  // 3434343443.jpg
+
+            Image::make($multi_image)->resize(220,220)->save('upload/images/'.$name_gen);
+            $save_url = 'upload/images/'.$name_gen;
+
+            MultiImage::insert([
+                'images' => $save_url,
+                'category_id' => $request->category_id,
+                'created_at' => Carbon::now()
+
+            ]);
+
+        } // End of the froeach
+
+
+        $notification = array(
+            'message' => 'Multi Image Inserted Successfully',
+            'alert-type' => 'success'
+        );
+
+        //return redirect()->route('all.multi.image')->with($notification);
+        return redirect()->back()->with($notification);
+
+    }// End Method
 
     public function store(Request $request)
     {

@@ -28,20 +28,37 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
-                        <span>gallery Setup</span>
+                        <span>Category Setup</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-{{--                        <li><a href="{{route('home.gallery')}}">gallery</a></li>--}}
-
+                        <li><a href="{{route('categories.index')}}">All Categories</a></li>
                     </ul>
                     <ul class="sub-menu" aria-expanded="false">
-{{--                        <li><a href="{{route('home.create')}}">create</a></li>--}}
+                        <li><a href="{{route('gallery.categories.create')}}">Create gallery category</a></li>
 
                     </ul>
+
 
                 </li>
 
                <li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>Gallery images Setup</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{route('all.images')}}">All Images</a></li>
+                    </ul>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{route('images.upload')}}">Upload images</a></li>
+
+                    </ul>
+
+
+                </li>
+
+                <li>
                 <a href="javascript: void(0);" class="has-arrow waves-effect">
                     <i class="ri-mail-send-line"></i>
                     <span>About page set up</span>

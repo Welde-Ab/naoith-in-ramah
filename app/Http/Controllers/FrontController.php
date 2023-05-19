@@ -22,7 +22,7 @@ class FrontController extends Controller
         $categories = Category::with('galleries')->get();
 
 //        return view('admin.categories.index', compact('categories'));
-        return view('front_end.gallery_categories', compact('categories'));
+            return view('front_end.gallery_categories', compact('categories'));
 //        return view('front_end.gallery_categories');
     }
 
@@ -70,9 +70,9 @@ class FrontController extends Controller
     {
         return view('front_end.contact');
     }
-public function category($id){
+public function category($category_id){
 
-    $category = Category::where('id', $id)->get();
+    $category = Category::where('id', $category_id)->get();
 
         return view('front_end.gallery',compact('category'));
 }
