@@ -17,109 +17,83 @@ class MembersController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255|unique:categories,name',
-            'category_image' => 'required',
+            'name' => 'required|string|max:255|unique:members,name',
+            'member_image' => 'required',
         ],[
-            'name.required'=>'category name is required',
-            'category_image.required' =>'category image required'
+            'name.required'=>'Member name is required',
+            'members_image.required' =>'Member image required'
         ]);
-        $category_image = $request->file('category_image');
+        $category_image = $request->file('members_image');
 
-        $name_gen = hexdec(uniqid()).'.'.$category_image->getClientOriginalExtension();  // 3434343443.jpg
+        $name_gen = hexdec(uniqid()).'.'.$members_image->getClientOriginalExtension();  // 3434343443.jpg
 
-        Image::make($category_image)->resize(1020,519)->save('upload/categories/'.$name_gen);
+        Image::make($members_image)->resize(1020,519)->save('upload/categories/'.$name_gen);
         $save_url = 'upload/categories/'.$name_gen;
 
-        Category::insert([
+        Members::insert([
             'name' => $request->name,
             'description' => $request->description,
-            'category_image' =>  $save_url,
+            'members_image' =>  $save_url,
             'created_at' => Carbon::now(),
         ]);
 
         $notification = array(
-            'message' => 'Category Inserted Successfully',
+            'message' => 'Members Inserted Successfully',
             'alert-type' => 'success'
         );
-        return redirect()->route('categories.index')->with($notification);
-
-
+        return redirect()->route('admin.members.index_members')->with($notification);
     }
 
     public function index()
     {
-        $categories = Category::with('galleries')->get();
+        $members = Members::with('galleries')->get();
 
-        return view('admin.categories.index', compact('categories'));
+        return view('admin.members.index', compact('members'));
 
     }
-    public function EditCategory($id){
+    public function EditMembers($id){
 
-        $category = Category::findOrFail($id);
-        return view('admin.categories.edit_category',compact('category'));
+        $members = Members::findOrFail($id);
+        return view('admin.members.edit_members',compact('members'));
     }// End Method
 
 
-    public function UpdateCategory(Request $request){
+    public function UpdateMembers(Request $request){
 
-        $category_id = $request->id;
+        $members_id = $request->id;
 
-        if ($request->file('category_image')) {
-            $image = $request->file('category_image');
+        if ($request->file('members_image')) {
+            $image = $request->file('members_image');
             $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();  // 3434343443.jpg
 
-            Image::make($image)->resize(1020,519)->save('upload/categories/'.$name_gen);
-            $save_url = 'upload/categories/'.$name_gen;
+            Image::make($image)->resize(1020,519)->save('upload/members/'.$name_gen);
+            $save_url = 'upload/members/'.$name_gen;
 
             Category::findOrFail($category_id)->update([
-
-
                 'name' => $request->name,
                 'description' => $request->description,
                 'category_image' =>  $save_url,
-
-
             ]);
             $notification = array(
-                'message' => 'Category Updated with Image Successfully',
+                'message' => 'Members Updated with Image Successfully',
                 'alert-type' => 'success'
             );
 
-            return redirect()->route('categories.index')->with($notification);
+            return redirect()->route('members.index')->with($notification);
 
         } else{
 
-            Category::findOrFail($category_id)->update([
+            Members::findOrFail($members_id)->update([
                 'name' => $request->name,
                 'description' => $request->description,
-
-
             ]);
+
             $notification = array(
-                'message' => 'Category Updated without Image Successfully',
+                'message' => 'Member updated without Image Successfully',
                 'alert-type' => 'success'
             );
 
-            return redirect()->route('categories.index')->with($notification);
-
+            return redirect()->route('members.index')->with($notification);
         } // end Else
-
     } // End Method
-    public function DeleteCategory($id){
-
-        $categories = Category::findOrFail($id);
-        $img = $categories->category_image;
-        unlink($img);
-
-        Category::findOrFail($id)->delete();
-
-        $notification = array(
-            'message' => 'Category Image Deleted Successfully',
-            'alert-type' => 'success'
-        );
-
-        return redirect()->back()->with($notification);
-
-    }// End Method
-
 }

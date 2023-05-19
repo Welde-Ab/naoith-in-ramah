@@ -28,11 +28,11 @@
                         <span>Gallery Setup</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{route('admin.galleries.create')}}"> Create Gallery </a></li>
+                        <li><a href="{{route('galleries.create')}}"> Create Gallery </a></li>
                     </ul>
 
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{route('admin.galleries.index')}}"> View Gallery </a></li>
+                        <li><a href="{{route('galleries.index')}}"> View Gallery </a></li>
                     </ul>
                 </li>
 
@@ -42,11 +42,11 @@
                         <span> Manage Categories </span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{route('admin.categories.create')}}"> Create Category </a></li>
+                        <li><a href="{{route('categories.create')}}"> Create Category </a></li>
                     </ul>
 
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{route('admin.categories.index')}}"> View Categories </a></li>
+                        <li><a href="{{route('categories.index')}}"> View Categories </a></li>
                     </ul>
                 </li>
 
@@ -56,11 +56,11 @@
                         <span> Manage Images </span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{route('admin.images.create')}}"> Upload Images </a></li>
+                        <li><a href="{{route('images.create')}}"> Upload Images </a></li>
                     </ul>
 
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{route('admin.images.index')}}"> View Images </a></li>
+                        <li><a href="{{route('images.index')}}"> View Images </a></li>
                     </ul>
                 </li>
 
@@ -70,15 +70,15 @@
                         <span> About Page Setup </span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{route('admin.members.create')}}"> Create Member </a></li>
+                        <li><a href="{{route('members.create')}}"> Create Member </a></li>
                     </ul>
 
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{route('admin.members.index')}}"> View Members </a></li>
+                        <li><a href="{{route('members.index')}}"> View Members </a></li>
                     </ul>
 
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{route('admin.members.edit')}}"> Edit Members </a></li>
+                        <li><a href="{{route('members.edit')}}"> Edit Members </a></li>
                     </ul>
                 </li>
 

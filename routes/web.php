@@ -77,25 +77,25 @@ Route::middleware(['auth'])->group(function () {
 //Route::post('admin/categories/store', [CategoryController::class, 'store'])->name('admin.categories.store');
 //Route::get('admin/categories/index', [CategoryController::class, 'index'])->name('admin.categories.index');
 
-Route::get('/categories/create', [CategoryController::class, 'create'])->name('gallery.categories.create');
+Route::get('/categories/create', [CategoryController::class, 'create'])->name('categories.create');
 Route::post('/categories', [CategoryController::class, 'store'])->name('categories.store');
 Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
 Route::get('/edit/categories/{id}', [CategoryController::class, 'EditCategory'])->name('edit.category');
 Route::post('/update/categories', [CategoryController::class, 'UpdateCategory'])->name('update.category');
 Route::get('/delete/categories/{id}', [CategoryController::class, 'DeleteCategory'])->name('delete.category');
 
-Route::get('admin/galleries/create', [GalleryController::class, 'create'])->name('admin.galleries.create');
-//Route::post('admin/galleries/store', [GalleryController::class, 'store'])->name('admin.galleries.store');
-Route::get('admin/galleries/index', [GalleryController::class, 'index'])->name('admin.galleries.index');
+Route::get('admin/galleries/create', [GalleryController::class, 'create'])->name('galleries.create');
+//Route::post('admin/galleries/store', [GalleryController::class, 'store'])->name('galleries.store');
+Route::get('admin/galleries/index', [GalleryController::class, 'index'])->name('galleries.index');
 
-Route::get('admin/images/create', [ImageController::class, 'create'])->name('admin.images.create');
-Route::post('admin/images/store', [ImageController::class, 'store'])->name('admin.images.store');
-Route::get('admin/images/index', [ImageController::class, 'index'])->name('admin.images.index');
+Route::get('admin/images/create', [ImageController::class, 'create'])->name('images.create');
+Route::post('admin/images/store', [ImageController::class, 'store'])->name('images.store');
+Route::get('admin/images/index', [ImageController::class, 'index'])->name('images.index');
 
 Route::get('/members/create', [MembersController::class, 'create'])->name('members.create');
 Route::post('/members', [MembersController::class, 'store'])->name('members.store');
 Route::get('/members', [MembersController::class, 'index'])->name('members.index');
-Route::get('/members/{id}', [MembersController::class, 'EditMembers'])->name('edit.members');
+Route::get('/members/{id}', [MembersController::class, 'EditMembers'])->name('members.edit');
 Route::post('/update/members', [MembersController::class, 'UpdateMembers'])->name('update.members');
 
 Route::get('/prayers/create', [PrayersController::class, 'create'])->name('prayers.create');
