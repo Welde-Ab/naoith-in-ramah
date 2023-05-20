@@ -30,7 +30,7 @@
                                 <div class="row mb-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Category Name</label>
                                     <div class="col-sm-10">
-                                        <input name="name" class="form-control" type="text" name="name" id="name">
+                                        <input name="name" class="form-control" type="text"  id="name">
                                         @error('name')
                                         <span class="text-danger">{{$message}}</span>
                                         @enderror

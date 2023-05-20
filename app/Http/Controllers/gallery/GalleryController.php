@@ -52,7 +52,62 @@ class GalleryController extends Controller
 
     }// End Method
 
+    public function AllImages(){
+
+        $allImages = Gallery::all();
+        return view('admin.galleries.index',compact('allImages'));
+
+    }// End Method
+
+    public function EditImage($id){
+
+        $editableImage = Gallery::findOrFail($id);
+        return view('admin.galleries.edit_image',compact('editableImage'));
+
+    }// End Method
+
+    public function UpdateImage(Request $request){
+        $multi_image_id = $request->id;
+        if ($request->file('images')) {
+            $image = $request->file('images');
+            $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();  // 3434343443.jpg
+
+            Image::make($image)->resize(220,220)->save('upload/images/'.$name_gen);
+            $save_url = 'upload/images/'.$name_gen;
+
+            Gallery::findOrFail($multi_image_id)->update([
+                'images' => $save_url,
+            ]);
+
+            $notification = array(
+                'message' => 'Image Updated Successfully',
+                'alert-type' => 'success'
+            );
+
+            return redirect()->route('all.images')->with($notification);
+
+        }
+
+    }// End Method
 
 
+    public function DeleteImage($id){
+
+        $multi = Gallery::findOrFail($id);
+        $img = $multi->images;
+        unlink($img);
+
+        Gallery::findOrFail($id)->delete();
+
+        $notification = array(
+            'message' => 'Multi Image Deleted Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification);
+
+
+
+    }// End Method
 
 }

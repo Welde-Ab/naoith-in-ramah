@@ -1,12 +1,15 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\GalleryCategoryController;
 use App\Http\Controllers\gallery\CategoryController;
 use App\Http\Controllers\gallery\GalleryController;
 use App\Http\Controllers\gallery\ImageController;
 
+use App\Http\Controllers\ShortController;
+use App\Http\Controllers\TestimonyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -119,7 +122,37 @@ Route::get('/delete/categories/{id}', [CategoryController::class, 'DeleteCategor
 
 Route::get('/galleries/create', [GalleryController::class, 'create'])->name('images.upload');
 Route::post('/galleries', [GalleryController::class, 'StoreMultiImage'])->name('images.store');
-Route::post('/galleries/all', [GalleryController::class, 'AllImages'])->name('all.images');
+Route::get('/galleries/all', [GalleryController::class, 'AllImages'])->name('all.images');
+Route::Post('/update/images', [GalleryController::class, 'UpdateImage'])->name('update.image');
+Route::get('/edit/image/{id}', [GalleryController::class, 'EditImage'])->name('edit.image');
+Route::get('/delete/image/{id}', [GalleryController::class, 'DeleteImage'])->name('delete.image');
+
+//testimonies
+Route::get('/testimonies/create', [TestimonyController::class, 'create'])->name('create.testimony');
+Route::post('/testimonies', [TestimonyController::class, 'StoreTestimony'])->name('testimony.store');
+Route::get('/testimonies/all', [TestimonyController::class, 'AllTestimonies'])->name('all.testimonies');
+Route::get('/edit/testimonies/{id}', [TestimonyController::class, 'EditTestimony'])->name('edit.testimony');
+Route::post('/update/testimonies', [TestimonyController::class, 'UpdateTestimony'])->name('update.testimony');
+Route::get('/delete/testimonies/{id}', [TestimonyController::class, 'DeleteTestimony'])->name('delete.testimony');
+
+//articles
+Route::get('/articles/create', [ArticleController::class, 'create'])->name('create.article');
+Route::post('/articles', [ArticleController::class, 'StoreArticle'])->name('article.store');
+Route::get('/articles/all', [ArticleController::class, 'AllArticles'])->name('all.articles');
+Route::get('/edit/articles/{id}', [ArticleController::class, 'EditArticle'])->name('edit.article');
+Route::post('/update/articles', [ArticleController::class, 'UpdateArticle'])->name('update.article');
+Route::get('/delete/articles/{id}', [ArticleController::class, 'DeleteArticle'])->name('delete.article');
+// shorts
+Route::get('/shorts/create', [ShortController::class, 'create'])->name('create.short');
+Route::post('/shorts', [ShortController::class, 'StoreShort'])->name('short.store');
+Route::get('/shorts/all', [ShortController::class, 'AllShorts'])->name('all.shorts');
+Route::get('/edit/shorts/{id}', [ShortController::class, 'EditShort'])->name('edit.short');
+Route::post('/update/shorts', [ShortController::class, 'UpdateShort'])->name('update.short');
+Route::get('/delete/shorts/{id}', [ShortController::class, 'DeleteShort'])->name('delete.short');
+
+
+
+
 //Route::post('/galleries', [GalleryController::class, 'store'])->name('galleries.store');
 //Route::get('/allimages', [GalleryController::class, 'index'])->name('categories.index');
 

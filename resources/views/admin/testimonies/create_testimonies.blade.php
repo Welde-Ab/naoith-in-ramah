@@ -20,62 +20,45 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <h4 class="card-title">Create Category Page </h4>
+                            <h4 class="card-title">Create Testimony Page </h4>
 
-                            <form method="post" action="{{ route('categories.store') }}" enctype="multipart/form-data">
 
+                                <form method="post" action="{{ route('testimony.store') }}" enctype="multipart/form-data">
 
                                 @csrf
-
+                                    <div class="row mb-3">
+                                        <label for="example-text-input" class="col-sm-2 col-form-label">Testimony Name</label>
+                                        <div class="col-sm-10">
+                                            <input  class="form-control" type="text" name="testimonies_name" id="testimonies_name">
+{{--                                            @error('name')--}}
+{{--                                            <span class="text-danger">{{$message}}</span>--}}
+{{--                                            @enderror--}}
+                                        </div>
+                                    </div>
+                                    <!-- end row -->
                                 <div class="row mb-3">
-                                    <label for="example-text-input" class="col-sm-2 col-form-label">Category Name</label>
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">Testimony description</label>
                                     <div class="col-sm-10">
-                                        <input name="name" class="form-control" type="text" name="name" id="name">
-                                        @error('name')
-                                        <span class="text-danger">{{$message}}</span>
-                                        @enderror
+                                        <input  class="form-control" type="text" name="testimonies_description" id="testimonies_description">
+{{--                                        @error('name')--}}
+{{--                                        <span class="text-danger">{{$message}}</span>--}}
+{{--                                        @enderror--}}
                                     </div>
                                 </div>
-                                <!-- end row -->
+                                      <!-- end row -->
 
-                                <div class="row mb-3">
-                                    <label for="example-text-input" class="col-sm-2 col-form-label">Category  Description</label>
-                                    <div class="col-sm-10">
-
-                                        <textarea id="elm1"name="description"></textarea>
-
-
+                                    <div class="row mb-3">
+                                        <label for="example-text-input" class="col-sm-2 col-form-label"> Testimony Url</label>
+                                        <div class="col-sm-10">
+                                            <input  class="form-control" type="text" name="testimonies_url" id="name">
+{{--                                            @error('name')--}}
+{{--                                            <span class="text-danger">{{$message}}</span>--}}
+{{--                                            @enderror--}}
+                                        </div>
                                     </div>
-                                </div>
-                                <!-- end row -->
-
-
-
-
-
-                                <div class="row mb-3">
-                                    <label for="example-text-input" class="col-sm-2 col-form-label">Category Image </label>
-                                    <div class="col-sm-10">
-                                        <input name="category_image" class="form-control" type="file"  id="image">
-
-
-                                        @error('category_image')
-                                        <span class="text-danger">{{$message}}</span>
-                                        @enderror
-                                    </div>
-                                </div>
-                                <!-- end row -->
-                                <div class="row mb-3">
-                                <label for="example-text-input"class="col-sm-2col-form-label"></label>
-                                <div class="col-sm-10">
-                                <img id="showImage"class="rounded avatar-lg"src="{{url('upload/no_image.jpg')}}"alt="Cardimagecap">
-                                 </div>
-                                </div>
-
-
 
                                 <!-- end row -->
-                                <input type="submit" class="btn btn-info waves-effect waves-light" value="Create Category">
+                                <input type="submit" class="btn btn-info waves-effect waves-light" value="Create Testimony">
                             </form>
 
 

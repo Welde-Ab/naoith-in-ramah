@@ -11,24 +11,24 @@
             <ul class="metismenu list-unstyled" id="side-menu">
                 <li class="menu-title">Menu</li>
 
-                <li>
-                    <a href="index.html" class="waves-effect">
-                        <i class="ri-dashboard-line"></i><span class="badge rounded-pill bg-success float-end">3</span>
-                        <span>Dashboard</span>
-                    </a>
-                </li>
+{{--                <li>--}}
+{{--                    <a href="index.html" class="waves-effect">--}}
+{{--                        <i class="ri-dashboard-line"></i><span class="badge rounded-pill bg-success float-end">3</span>--}}
+{{--                        <span>Dashboard</span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
 
-                <li>
-                    <a href="calendar.html" class=" waves-effect">
-                        <i class="ri-calendar-2-line"></i>
-                        <span>Calendar</span>
-                    </a>
-                </li>
+{{--                <li>--}}
+{{--                    <a href="calendar.html" class=" waves-effect">--}}
+{{--                        <i class="ri-calendar-2-line"></i>--}}
+{{--                        <span>Calendar</span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
-                        <span>Category Setup</span>
+                        <span>Gallery Category Setup</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{route('categories.index')}}">All Categories</a></li>
@@ -59,30 +59,52 @@
                 </li>
 
                 <li>
-                <a href="javascript: void(0);" class="has-arrow waves-effect">
-                    <i class="ri-mail-send-line"></i>
-                    <span>About page set up</span>
-                </a>
-                <ul class="sub-menu" aria-expanded="false">
-{{--                    <li><a href="{{route('gallery.page')}}">gallery page</a></li>--}}
-{{--                    <li><a href="{{route('gallery.multi.image')}}">gallery Multi Image</a></li>--}}
-{{--                    <li><a href="{{route('all.gallery.image')}}">All Multi Image</a></li>--}}
-                    {{--                    <li><a href="{{route('about.page')}}">About page</a></li>--}}
-                    {{--                    <li><a href="{{route('about.multi.image')}}">About Multi Image</a></li>--}}
-                    {{--                    <li><a href="{{route('all.multi.image')}}">All Multi Image</a></li>--}}
-                </ul>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>Testimony Setup</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{route('create.testimony')}}">Create testimonys</a></li>
+                    </ul>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{route('all.testimonies')}}">All testimonies</a></li>
+
+                    </ul>
+
+
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>Article Setup</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{route('create.article')}}">Create Article</a></li>
+                    </ul>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{route('all.articles')}}">All Articles</a></li>
+
+                    </ul>
+
+
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
-                        <span>Portfolio Page Setup</span>
+                        <span>Shorts Setup</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-{{--                        <li><a href="{{ route('all.portfolio') }}">All Portfolio</a></li>--}}
-{{--                        <li><a href="{{ route('add.portfolio') }}">Add Portfolio</a></li>--}}
+                        <li><a href="{{route('create.short')}}">Create Short</a></li>
+                    </ul>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{route('all.shorts')}}">All Short</a></li>
 
                     </ul>
+
+
                 </li>
+
 
                 <li class="menu-title">Pages</li>
 

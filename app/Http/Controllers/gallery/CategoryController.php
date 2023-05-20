@@ -4,6 +4,7 @@ namespace App\Http\Controllers\gallery;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Gallery;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Intervention\Image\Facades\Image;
@@ -18,6 +19,7 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
+        $test=dd($request);
         $request->validate([
             'name' => 'required|string|max:255|unique:categories,name',
             'category_image' => 'required',
@@ -75,11 +77,9 @@ class CategoryController extends Controller
 
             Category::findOrFail($category_id)->update([
 
-
                 'name' => $request->name,
                 'description' => $request->description,
-                'category_image' =>  $save_url,
-
+                'category_image' => $save_url,
 
             ]);
             $notification = array(
@@ -96,6 +96,7 @@ class CategoryController extends Controller
                 'description' => $request->description,
 
 
+
             ]);
             $notification = array(
                 'message' => 'Category Updated without Image Successfully',
@@ -107,6 +108,8 @@ class CategoryController extends Controller
         } // end Else
 
     } // End Method
+
+
     public function DeleteCategory($id){
 
         $categories = Category::findOrFail($id);

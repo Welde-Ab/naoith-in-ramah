@@ -10,17 +10,17 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <h4 class="card-title">Testimony Edit Page </h4>
+                            <h4 class="card-title">Short Edit Page </h4>
 
-                            <form method="post" action="{{ route('update.testimony') }}" enctype="multipart/form-data">
+                            <form method="post" action="{{ route('update.short') }}" enctype="multipart/form-data">
                                 @csrf
 
-                                <input type="hidden" name="id" value="{{  $testimony->id }}">
+                                <input type="hidden" name="id" value="{{  $short->id }}">
 
                                 <div class="row mb-3">
-                                    <label for="example-text-input" class="col-sm-2 col-form-label">Testimony Name</label>
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">Short Name</label>
                                     <div class="col-sm-10">
-                                        <input name="testimonies_name" class="form-control" type="text" value="{{ $testimony->testimonies_name }}" id="example-text-input">
+                                        <input name="shorts_name" class="form-control" type="text" value="{{ $short->shorts_name }}" id="example-text-input">
                                         @error('name')
                                         <span class="text-danger"> {{ $message }} </span>
                                         @enderror
@@ -29,9 +29,9 @@
                                 <!-- end row -->
 
                                 <div class="row mb-3">
-                                    <label for="example-text-input" class="col-sm-2 col-form-label">Testimony Description </label>
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">Short Description </label>
                                     <div class="col-sm-10">
-                                        <input name="testimonies_description" class="form-control" type="text" value="{{ $testimony->testimonies_description }}" id="example-text-input">
+                                        <input name="shorts_description" class="form-control" type="text" value="{{ $short->shorts_description }}" id="example-text-input">
 
                                         @error('description')
                                         <span class="text-danger"> {{ $message }} </span>
@@ -42,9 +42,9 @@
 
                                 <!-- end row -->
                                 <div class="row mb-3">
-                                    <label for="example-text-input" class="col-sm-2 col-form-label">Testimony URL</label>
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">Short URL</label>
                                     <div class="col-sm-10">
-                                        <input name="testimonies_url" class="form-control" type="text" value="{{ $testimony->testimonies_url }}" id="example-text-input">
+                                        <input name="shorts_url" class="form-control" type="text" value="{{ $short->shorts_url }}" id="example-text-input">
                                         @error('name')
                                         <span class="text-danger">{{$message}}</span>
                                         @enderror
@@ -85,3 +85,4 @@
     </script>
 
 @endsection
+
