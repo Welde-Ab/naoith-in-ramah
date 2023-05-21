@@ -13,9 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('shorts', function (Blueprint $table) {
+        Schema::create('series', function (Blueprint $table) {
             $table->id();
-
+            $table->string('series_name')->nullable();
+            $table->string('series_url')->nullable();
+            $table->string('series_description')->nullable();
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('shorts');
+        Schema::dropIfExists('series');
     }
 };

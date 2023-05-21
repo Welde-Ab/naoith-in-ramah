@@ -57,6 +57,12 @@
 
         </div>
 
+Route::get('/prayers/create', [PrayerController::class, 'create'])->name('create.prayer');
+Route::post('/prayers', [PrayerController::class, 'StorePrayer'])->name('prayer.store');
+Route::get('/prayers/all', [PrayerController::class, 'AllTestimonies'])->name('all.prayers');
+Route::get('/edit/prayers/{id}', [PrayerController::class, 'EditPrayer'])->name('edit.prayer');
+Route::post('/update/prayers', [PrayerController::class, 'UpdatePrayer'])->name('update.prayer');
+Route::get('/delete/prayers/{id}', [PrayerController::class, 'DeletePrayer'])->name('delete.prayer');
 
 
 

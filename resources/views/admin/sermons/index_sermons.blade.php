@@ -1,13 +1,3 @@
-{{--@foreach ($categories as $category)--}}
-{{--    <h2>{{ $category->name }}</h2>--}}
-
-{{--    <ul>--}}
-{{--        @foreach ($category->galleries as $gallery)--}}
-{{--            <li>{{ $gallery->name }}</li>--}}
-{{--        @endforeach--}}
-{{--    </ul>--}}
-{{--@endforeach--}}
-
 @extends('admin.admin_master')
 @section('admin')
 
@@ -19,7 +9,9 @@
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                        <h4 class="mb-sm-0"> All Gallery images</h4>
+                        <h4 class="mb-sm-0"> All </h4>
+
+
 
                     </div>
                 </div>
@@ -31,16 +23,16 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <h4 class="card-title">Gallery All Data </h4>
+                            <h4 class="card-title"> All Data Sermons </h4>
 
 
                             <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                 <thead>
                                 <tr>
                                     <th>Sl</th>
-                                    <th>Image Name</th>
-                                    <th>Image </th>
-                                    <th>Date uploded</th>
+                                    <th> Name</th>
+                                    <th> Description</th>
+                                    <th> Url</th>
                                     <th>Action</th>
 
                                 </thead>
@@ -48,19 +40,18 @@
 
                                 <tbody>
                                 @php($i = 1)
-                                @foreach($galleries as $item)
+                                @foreach($sermons as $item)
                                     <tr>
                                         <td> {{ $i++}} </td>
-                                        <td> {{ $item->name }} </td>
-{{--                                        <td> {{ $item->category}} </td>--}}
-                                        <td> <img src="{{ asset($item->image) }}" style="width: 60px; height: 50px;"> </td>
-
+                                        <td> {{ $item->sermons_name}} </td>
+                                        <td> {{ $item->sermons_description}} </td>
+                                        <td> {{ $item->sermons_url}} </td>
 
                                         <td>
-{{--                                            <a href="{{ route('edit.category',$item->id) }}" class="btn btn-info sm" title="Edit Data">  <i class="fas fa-edit"></i> </a>--}}
+                                            <a href="{{ route('edit.sermon',$item->id) }}" class="btn btn-info sm" title="Edit Data">  <i class="fas fa-edit"></i> </a>
 
-{{--                                            <a href="{{ route('delete.category',$item->id) }}" class="btn btn-danger sm" title="Delete Data"--}}
-{{--                                               id="delete">  <i class="fas fa-trash-alt"></i> </a>--}}
+                                            <a href="{{ route('delete.sermon',$item->id) }}" class="btn btn-danger sm" title="Delete Data"
+                                               id="delete">  <i class="fas fa-trash-alt"></i> </a>
 
                                         </td>
 
