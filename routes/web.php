@@ -9,6 +9,7 @@ use App\Http\Controllers\gallery\CategoryController;
 use App\Http\Controllers\gallery\GalleryController;
 use App\Http\Controllers\gallery\ImageController;
 
+use App\Http\Controllers\MembersController;
 use App\Http\Controllers\PrayersController;
 use App\Http\Controllers\SeriesController;
 use App\Http\Controllers\SermonController;
@@ -182,6 +183,14 @@ Route::get('/events/all', [EventsController::class, 'AllEvents'])->name('all.eve
 Route::get('/edit/events/{id}', [EventsController::class, 'EditEvent'])->name('edit.event');
 Route::post('/update/events', [EventsController::class, 'UpdateEvent'])->name('update.event');
 Route::get('/delete/events/{id}', [EventsController::class, 'DeleteEvent'])->name('delete.event');
+//members
+Route::get('/members/create', [MembersController::class, 'create'])->name('create.member');
+Route::post('/members', [MembersController::class, 'store'])->name('members.store');
+Route::get('/members', [MembersController::class, 'index'])->name('all.members');
+Route::get('/edit/members/{id}', [MembersController::class, 'EditMember'])->name('edit.member');
+Route::post('/update/members', [MembersController::class, 'UpdateMember'])->name('update.member');
+Route::get('/delete/members/{id}', [MembersController::class, 'DeleteMember'])->name('delete.member');
+
 //Route::post('/galleries', [GalleryController::class, 'store'])->name('galleries.store');
 //Route::get('/allimages', [GalleryController::class, 'index'])->name('categories.index');
 
