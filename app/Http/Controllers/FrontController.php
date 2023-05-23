@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
@@ -16,31 +17,14 @@ class FrontController extends Controller
         return view('front_end.about_menu.about');
     }
 
-    public function believe()
-    {
-        return view('front_end.about_menu.believe');
-    }
-
-    public function members()
-    {
-        return view('front_end.about_menu.members');
-    }
-
-    public function testimonies()
-    {
-        return view('front_end.about_menu.testimonies');
-    }
-
     public function gallery()
     {
-        return view('front_end.gallery');
-    }
+        $categories = Category::with('galleries')->get();
 
-    public function gallery_categories()
-    {
-        return view('front_end.gallery_categories');
+//        return view('admin.categories.index', compact('categories'));
+            return view('front_end.gallery_categories', compact('categories'));
+//        return view('front_end.gallery_categories');
     }
-
 
     public function worships()
     {
@@ -69,7 +53,7 @@ class FrontController extends Controller
 
     public function shorts()
     {
-        return view('front_end.resources_menu.teachings.shorts');
+        return view('front_end.resources_menu.teachings.short');
     }
 
     public function events()
@@ -87,4 +71,15 @@ class FrontController extends Controller
         return view('front_end.contact');
     }
 
+    public function testimonies()
+    {
+        return view('front_end.resources_menu.testimonies');
+    }
+
+    public function category($category_id){
+
+    $category = Category::where('id', $category_id)->get();
+
+        return view('front_end.gallery',compact('category'));
+}
 }

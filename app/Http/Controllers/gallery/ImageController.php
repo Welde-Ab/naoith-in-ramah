@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\gallery;
 
 use App\Http\Controllers\Controller;
-use App\Models\galleries;
-use App\Models\images;
+use App\Models\Gallery;
+use App\Models\Image;
 use Illuminate\Http\Request;
 
 class ImageController extends Controller
@@ -12,9 +12,8 @@ class ImageController extends Controller
     //
     public function create()
     {
-//        $galleries = Image::all();
-//        return view('admin.images.create', compact('galleries'));
-        return view('admin.images.create');
+        $galleries = Gallery::all();
+        return view('admin.images.create', compact('galleries'));
     }
 
     public function store(Request $request)

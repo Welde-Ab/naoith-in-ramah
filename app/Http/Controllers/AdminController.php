@@ -2,39 +2,40 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
+    //
     public function destroy(Request $request)
     {
         Auth::guard('web')->logout();
+
         $request->session()->invalidate();
+
         $request->session()->regenerateToken();
         $notification = array(
             'message' => 'Loged out Successfully',
             'alert-type' => 'success'
         );
+
         return redirect('/login')->with($notification);
     }
-
     public function Profile(Request $request)
     {
         $id= Auth::user()->id; //geting the loged in user id
         $adminData = User::find($id);//getting the user using the id
         return view ('admin.admin_profile_view',compact('adminData'));//passing the user info to the view
     }
-
     public function EditProfile(Request $request)
     {
         $id= Auth::user()->id; //geting the loged in user id
         $editData = User::find($id);//getting the user using the id
         return view ('admin.admin_profile_edit',compact('editData'));//passing the user info to the view
     }
-
     public function StoreProfile(Request $request)
     {
         $id = Auth::user()->id;
@@ -57,9 +58,10 @@ class AdminController extends Controller
         );
         return redirect()->route('admin.profile')->with($notification);
     }
-
     public function ChangePassword() {
+
         return view('admin.admin_change_password');
+
     }
 
     public function UpdatePassword(Request $request){
@@ -84,5 +86,5 @@ class AdminController extends Controller
             return redirect()->back();
         }
 
-    }
+    }// End Method
 }

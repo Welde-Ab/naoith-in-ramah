@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Gallery extends Model
 {
-    protected $fillable = ['name', 'category_id'];
-
+//    protected $fillable = ['name', 'category_id'];
+protected $guarded=[];
     public function category()
     {
         return $this->belongsTo(Category::class);

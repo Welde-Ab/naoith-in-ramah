@@ -3,165 +3,111 @@
 namespace App\Http\Controllers\gallery;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Gallery;
-use Illuminate\Http\Request;
+use App\Models\MultiImage;
 use Carbon\Carbon;
+use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 
-class CategoryController extends Controller
+class GalleryController extends Controller
 {
     //
     public function create()
     {
-        return view('admin.categories.create');
+        $categories = Category::all();
+        return view('admin.galleries.create', compact('categories'));
     }
 
-    public function store(Request $request)
-    {
-        $request->validate([
-            'name' => 'required|string|max:255|unique:categories,name',
-            'category_image' => 'required',
-        ],[
-            'name.required'=>'category name is required',
-            'category_image.required' =>'category image required'
-        ]);
-        $category_image = $request->file('category_image');
+//
 
-        $name_gen = hexdec(uniqid()).'.'.$category_image->getClientOriginalExtension();  // 3434343443.jpg
+    public function StoreMultiImage(Request $request){
 
-        Image::make($category_image)->resize(1020,519)->save('upload/categories/'.$name_gen);
-        $save_url = 'upload/categories/'.$name_gen;
+        $image = $request->file('images');
 
-        Category::insert([
-            'name' => $request->name,
-            'description' => $request->description,
-            'category_image' =>  $save_url,
-            'created_at' => Carbon::now(),
-        ]);
+        foreach ($image as $multi_image) {
+
+            $name_gen = hexdec(uniqid()).'.'.$multi_image->getClientOriginalExtension();  // 3434343443.jpg
+
+            Image::make($multi_image)->resize(220,220)->save('upload/images/'.$name_gen);
+            $save_url = 'upload/images/'.$name_gen;
+
+            Gallery::insert([
+                'images' => $save_url,
+                'category_id' => $request->category_id,
+                'created_at' => Carbon::now()
+
+            ]);
+
+        } // End of the froeach
+
 
         $notification = array(
-            'message' => 'Category Inserted Successfully',
+            'message' => 'Multi Image Inserted Successfully',
             'alert-type' => 'success'
         );
-        return redirect()->route('categories.index')->with($notification);
 
+        //return redirect()->route('all.multi.image')->with($notification);
+        return redirect()->back()->with($notification);
 
-    }
+    }// End Method
 
-    public function index()
-    {
-        $categories = Category::with('galleries')->get();
+    public function AllImages(){
 
-        return view('admin.categories.index', compact('categories'));
+        $allImages = Gallery::all();
+        return view('admin.galleries.index',compact('allImages'));
 
-    }
-    public function EditCategory($id){
+    }// End Method
 
-        $category = Category::findOrFail($id);
-        return view('admin.categories.edit_category',compact('category'));
+    public function EditImage($id){
+
+        $editableImage = Gallery::findOrFail($id);
+        return view('admin.galleries.edit_image',compact('editableImage'));
+
+    }// End Method
+
+    public function UpdateImage(Request $request){
+        $multi_image_id = $request->id;
+        if ($request->file('images')) {
+            $image = $request->file('images');
+            $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();  // 3434343443.jpg
+
+            Image::make($image)->resize(220,220)->save('upload/images/'.$name_gen);
+            $save_url = 'upload/images/'.$name_gen;
+
+            Gallery::findOrFail($multi_image_id)->update([
+                'images' => $save_url,
+            ]);
+
+            $notification = array(
+                'message' => 'Image Updated Successfully',
+                'alert-type' => 'success'
+            );
+
+            return redirect()->route('all.images')->with($notification);
+
+        }
+
     }// End Method
 
 
-    public function UpdateCategory(Request $request){
+    public function DeleteImage($id){
 
-        $category_id = $request->id;
-
-        if ($request->file('category_image')) {
-            $image = $request->file('category_image');
-            $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();  // 3434343443.jpg
-
-            Image::make($image)->resize(1020,519)->save('upload/categories/'.$name_gen);
-            $save_url = 'upload/categories/'.$name_gen;
-
-            Category::findOrFail($category_id)->update([
-
-
-                'name' => $request->name,
-                'description' => $request->description,
-                'category_image' =>  $save_url,
-
-
-            ]);
-            $notification = array(
-                'message' => 'Category Updated with Image Successfully',
-                'alert-type' => 'success'
-            );
-
-            return redirect()->route('categories.index')->with($notification);
-
-        } else{
-
-            Category::findOrFail($category_id)->update([
-                'name' => $request->name,
-                'description' => $request->description,
-
-
-            ]);
-            $notification = array(
-                'message' => 'Category Updated without Image Successfully',
-                'alert-type' => 'success'
-            );
-
-            return redirect()->route('categories.index')->with($notification);
-
-        } // end Else
-
-    } // End Method
-    public function DeleteCategory($id){
-
-        $categories = Category::findOrFail($id);
-        $img = $categories->category_image;
+        $multi = Gallery::findOrFail($id);
+        $img = $multi->images;
         unlink($img);
 
-        Category::findOrFail($id)->delete();
+        Gallery::findOrFail($id)->delete();
 
         $notification = array(
-            'message' => 'Category Image Deleted Successfully',
+            'message' => 'Multi Image Deleted Successfully',
             'alert-type' => 'success'
         );
 
         return redirect()->back()->with($notification);
-    }// End Method
-}
 
-//<?php
-//
-//namespace App\Http\Controllers\gallery;
-//
-//use App\Http\Controllers\Controller;
-//use App\Models\Category;
-//use App\Models\Gallery;
-//use Illuminate\Http\Request;
-//
-//class GalleryController extends Controller
-//{
-//    //
-//    public function create()
-//    {
-//        // The commented code selects all categories from Category send the compacted version of Categories while returning
-////        $categories = Category::all();
-////        return view('admin.galleries.create', compact('categories'));
-//        return view('admin.galleries.index');
-//    }
-//
-//    public function index()
-//    {
-//        return view('admin.galleries.index');
-//    }
-//
-////    public function store(Request $request)
-////    {
-////        $request->validate([
-////            'name' => 'required|string|max:255',
-////            'category_id' => 'required|exists:categories,id',
-////        ]);
-////
-////        Gallery::create([
-////            'name' => $request->name,
-////            'category_id' => $request->category_id,
-////        ]);
-////
-////        return redirect()->route('categories.index');
-////    }
-//
-//}
+
+
+    }// End Method
+
+}
