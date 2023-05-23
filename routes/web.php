@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\GalleryCategoryController;
@@ -32,14 +33,31 @@ use Illuminate\Support\Facades\Route;
 //    return view('front_end.index');// Sub-directories are elaborted in .
 //});
 
+
+
+
 Route::controller(FrontController::class)->group(function () {
     Route::get('/', 'index') -> name('home');
     Route::get('/about_menu/about', 'about') -> name('about');
     Route::get('/gallery', 'gallery') -> name('gallery');
+    Route::get('/contact', 'contact') -> name('contact');
+    Route::get('/about_menu/members', 'members') -> name('members');
+    Route::get('/about_menu/believe', 'believe') -> name('believe');
+    Route::get('/gallery/category/{category_id}','category')->name('gallery.category');
+    Route::get('/about_menu/testimonies', 'testimonies') -> name('testimonies');
+
     Route::get('/worships-songs', 'worships') -> name('worships');
     Route::get('/contact', 'contact') -> name('contact');
-    Route::get('/gallery/category/{category_id}','category')->name('gallery.category');
+    Route::get('/resources_menu/prayers', 'prayers') -> name('prayers');
+    Route::get('/resources_menu/events', 'events') -> name('events');
+    Route::get('/resources_menu/testimonies', 'testimonies') -> name('testimonies');
 
+    Route::get('/resources_menu/worships', 'worships') -> name('worships');
+    Route::get('/resources_menu/teachings/articles', 'articles') -> name('articles');
+    Route::get('/resources_menu/teachings/others', 'others') -> name('others');
+    Route::get('/resources_menu/teachings/series', 'series') -> name('series');
+    Route::get('/resources_menu/teachings/sermons', 'articles') -> name('sermons');
+    Route::get('/resources_menu/teachings/shorts', 'shorts') -> name('shorts');
 });
 
 //Route::get('/about', function () {
@@ -190,6 +208,14 @@ Route::get('/members', [MembersController::class, 'index'])->name('all.members')
 Route::get('/edit/members/{id}', [MembersController::class, 'EditMember'])->name('edit.member');
 Route::post('/update/members', [MembersController::class, 'UpdateMember'])->name('update.member');
 Route::get('/delete/members/{id}', [MembersController::class, 'DeleteMember'])->name('delete.member');
+
+Route::controller(ContactController::class)->group(function () {
+    Route::post('/store/message', 'StoreMessage')->name('store.message');
+    Route::get('/contact/message', 'ContactMessage')->name('contact.message');
+    Route::get('/delete/message/{id}', 'DeleteMessage')->name('delete.message');
+
+
+});
 
 //Route::post('/galleries', [GalleryController::class, 'store'])->name('galleries.store');
 //Route::get('/allimages', [GalleryController::class, 'index'])->name('categories.index');

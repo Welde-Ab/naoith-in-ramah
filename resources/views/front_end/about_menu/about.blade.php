@@ -38,36 +38,42 @@
     </div><!-- End Breadcrumbs -->
 
     <!-- ======= About Us Section ======= -->
-    <section id="about" class="about">
+    <section id="about" class="about pt-0">
         <div class="container" data-aos="fade-up">
-
             <div class="row gy-4">
+
+                {{--                        <div class="col-lg-6 position-relative align-self-start order-lg-last order-first">--}}
+                {{--                            <img src="assets/img/about.jpg" class="img-fluid" alt="">--}}
+                {{--                            <img src="{{asset('assets/img/Amelkihalehu.jpg')}}" class="img-fluid" alt="">--}}
+                {{--                            <a href="https://youtu.be/sdSMkICrssc" class="glightbox play-btn"></a>--}}
+                {{--                        </div>--}}
+
+                <div class="col-lg-6 position-relative align-self-start order-lg-last order-first">
+                    <img src="{{asset('front_end/assets/img/Amelkihalehu.jpg')}}" class="img-fluid" alt="">
+                    <a href="https://www.youtube.com/watch?v=sFuwFhGcmGM" class="glightbox play-btn"></a>
+                </div>
 
                 <div class="col-lg-6 content order-last  order-lg-first">
                     <h3>About Us</h3>
                     <p>
-                        Dolor iure expedita id fuga asperiores qui sunt consequatur minima. Quidem voluptas deleniti. Sit quia molestiae quia quas qui magnam itaque veritatis dolores. Corrupti totam ut eius incidunt reiciendis veritatis asperiores placeat.
+                        We are Ethiopian Christians gathered together in the name of our Lord and Savior Jesus Christ. Here in Japan we commune together to strengthen each other in our faith and serve one another as members of the body of Christ.
                     </p>
                     <ul>
                         <li data-aos="fade-up" data-aos-delay="100">
                             <i class="bi bi-diagram-3"></i>
                             <div>
-                                <h5>Ullamco laboris nisi ut aliquip consequat</h5>
-                                <p>Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade</p>
+                                <h5>Who we are?</h5>
+                                <p> It has been 20 years since Naoith in Ramah came to be. How the church came about to be and all - include a hyperlink to the full topic in about.html </p>
                             </div>
                         </li>
-                        <li data-aos="fade-up" data-aos-delay="200">
-                            <i class="bi bi-fullscreen-exit"></i>
-                            <div>
-                                <h5>Magnam soluta odio exercitationem reprehenderi</h5>
-                                <p>Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna pasata redi</p>
-                            </div>
-                        </li>
+
                         <li data-aos="fade-up" data-aos-delay="300">
                             <i class="bi bi-broadcast"></i>
                             <div>
-                                <h5>Voluptatem et qui exercitationem</h5>
-                                <p>Et velit et eos maiores est tempora et quos dolorem autem tempora incidunt maxime veniam</p>
+                                <h5>Our mission</h5>
+                                <p>As the local manifestation of the universal body of Christ we are ambassadors of the Eternal Devine King.
+                                    Our church stands to strengthen and build up the individual members to grown in their walk of faith. Also, we
+                                    consider it our mission to serve the Lord our God in our lives and spread the good new of his Kingdom. hyperlink here</p>
                             </div>
                         </li>
                     </ul>
@@ -77,174 +83,6 @@
         </div>
     </section><!-- End About Us Section -->
 
-    <!-- ======= Our Team Section ======= -->
-    <section id="team" class="team pt-0">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-header">
-                <span>Our Team</span>
-                <h2>Our Team</h2>
-
-            </div>
-
-            <div class="row" data-aos="fade-up" data-aos-delay="100">
-
-                <div class="col-lg-4 col-md-6 d-flex">
-                    <div class="member">
-                        <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
-                        <div class="member-content">
-                            <h4>Walter White</h4>
-                            <span>Web Development</span>
-                            <p>
-                                Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
-                            </p>
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- End Team Member -->
-
-                <div class="col-lg-4 col-md-6 d-flex">
-                    <div class="member">
-                        <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
-                        <div class="member-content">
-                            <h4>Sarah Jhinson</h4>
-                            <span>Marketing</span>
-                            <p>
-                                Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
-                            </p>
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- End Team Member -->
-
-                <div class="col-lg-4 col-md-6 d-flex">
-                    <div class="member">
-                        <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
-                        <div class="member-content">
-                            <h4>William Anderson</h4>
-                            <span>Content</span>
-                            <p>
-                                Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
-                            </p>
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- End Team Member -->
-
-            </div>
-
-        </div>
-    </section><!-- End Our Team Section -->
-
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-
-            <div class="slides-1 swiper" data-aos="fade-up">
-                <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                            <h3>Saul Goodman</h3>
-                            <h4>Ceo &amp; Founder</h4>
-                            <div class="stars">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                            </div>
-                            <p>
-                                <i class="bi bi-quote quote-icon-left"></i>
-                                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                                <i class="bi bi-quote quote-icon-right"></i>
-                            </p>
-                        </div>
-                    </div><!-- End testimonial item -->
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                            <h3>Sara Wilsson</h3>
-                            <h4>Designer</h4>
-                            <div class="stars">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                            </div>
-                            <p>
-                                <i class="bi bi-quote quote-icon-left"></i>
-                                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                                <i class="bi bi-quote quote-icon-right"></i>
-                            </p>
-                        </div>
-                    </div><!-- End testimonial item -->
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                            <h3>Jena Karlis</h3>
-                            <h4>Store Owner</h4>
-                            <div class="stars">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                            </div>
-                            <p>
-                                <i class="bi bi-quote quote-icon-left"></i>
-                                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                                <i class="bi bi-quote quote-icon-right"></i>
-                            </p>
-                        </div>
-                    </div><!-- End testimonial item -->
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                            <h3>Matt Brandon</h3>
-                            <h4>Freelancer</h4>
-                            <div class="stars">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                            </div>
-                            <p>
-                                <i class="bi bi-quote quote-icon-left"></i>
-                                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                                <i class="bi bi-quote quote-icon-right"></i>
-                            </p>
-                        </div>
-                    </div><!-- End testimonial item -->
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                            <h3>John Larson</h3>
-                            <h4>Entrepreneur</h4>
-                            <div class="stars">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                            </div>
-                            <p>
-                                <i class="bi bi-quote quote-icon-left"></i>
-                                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                                <i class="bi bi-quote quote-icon-right"></i>
-                            </p>
-                        </div>
-                    </div><!-- End testimonial item -->
-
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-
-        </div>
-    </section><!-- End Testimonials Section -->
-
     <!-- ======= Frequently Asked Questions Section ======= -->
     <section id="faq" class="faq">
         <div class="container" data-aos="fade-up">
@@ -252,7 +90,6 @@
             <div class="section-header">
                 <span>Frequently Asked Questions</span>
                 <h2>Frequently Asked Questions</h2>
-
             </div>
 
             <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="200">
@@ -264,12 +101,15 @@
                             <h3 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
                                     <i class="bi bi-question-circle question-icon"></i>
-                                    Non consectetur a erat nam at lectus urna duis?
+                                    Where are you located?
                                 </button>
                             </h3>
                             <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                                 <div class="accordion-body">
-                                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                                    We are located in Tokyo, Japan in a city called Katsushika-ku. We regularly commune at the Higashi-Yotsugichiku - a community center 10 minutes
+                                    away from Yotsugi station, every Sunday.
+                                    The full address is as follows:
+                                    <br> 〒124-0014 Tokyo, Katsushika City, Higashiyotsugi, 1 Chome−20−4, Tokyo, Japan
                                 </div>
                             </div>
                         </div><!-- # Faq item-->
@@ -278,12 +118,15 @@
                             <h3 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
                                     <i class="bi bi-question-circle question-icon"></i>
-                                    Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
+                                    How can we contact you?
                                 </button>
                             </h3>
                             <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                                 <div class="accordion-body">
-                                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                                    You can contact our pastor Kidus Tsegaye via his phone number and his email.
+                                    <br> Phone Number: +819091925271
+                                    <br> Email: kiduslord@gmail.com
+                                    <br> Email: kiduskkk@yahoo.com
                                 </div>
                             </div>
                         </div><!-- # Faq item-->
@@ -292,12 +135,17 @@
                             <h3 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
                                     <i class="bi bi-question-circle question-icon"></i>
-                                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?
+                                    What are your programs?
                                 </button>
                             </h3>
                             <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                                 <div class="accordion-body">
-                                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                                    Our weekly programs are as follows:
+                                        <ol>
+                                            <li> Sunday worship Service (1 PM to 4 PM) </li>
+                                            <li> Tuesday group prayer (7 PM to 8:30 PM) </li>
+                                            <li> Saturday bible study (8 PM to 9 PM) </li>
+                                        </ol>
                                 </div>
                             </div>
                         </div><!-- # Faq item-->
@@ -306,27 +154,13 @@
                             <h3 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4">
                                     <i class="bi bi-question-circle question-icon"></i>
-                                    Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
+                                    We want to support your ministry. Do you have an official bank account information?
                                 </button>
                             </h3>
                             <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                                 <div class="accordion-body">
                                     <i class="bi bi-question-circle question-icon"></i>
                                     Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                                </div>
-                            </div>
-                        </div><!-- # Faq item-->
-
-                        <div class="accordion-item">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-5">
-                                    <i class="bi bi-question-circle question-icon"></i>
-                                    Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
-                                </button>
-                            </h3>
-                            <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                                <div class="accordion-body">
-                                    Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
                                 </div>
                             </div>
                         </div><!-- # Faq item-->

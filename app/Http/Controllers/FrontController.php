@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Member;
+use App\Models\Testimonies;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
@@ -26,6 +28,23 @@ class FrontController extends Controller
 //        return view('front_end.gallery_categories');
     }
 
+    public function believe()
+    {
+        return view('front_end.about_menu.believe');
+    }
+
+    public function members()
+    {
+
+        $members = Member::latest()->get();
+        return view('front_end.about_menu.members',compact('members'));
+    }
+
+    public function testimonies()
+    {
+        $testimonies = Testimonies::latest()->get();
+        return view('front_end.resources_menu.testimonies',compact('testimonies'));
+    }
     public function worships()
     {
         return view('front_end.worships');
