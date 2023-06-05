@@ -15,7 +15,7 @@
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs">
         <div class="page-header d-flex align-items-center" style="background-image: url('{{asset('front_end/assets/img/page-header.jpg')}}');">
-            <link href = "{{asset('front_end/assets/img/favicon.png')}}" rel="icon">
+            <link href = "#" rel="icon">
             <div class="container position-relative">
                 <div class="row d-flex justify-content-center">
                     <div class="col-lg-6 text-center">

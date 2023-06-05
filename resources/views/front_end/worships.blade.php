@@ -44,12 +44,12 @@
 
                 <div class="row gy-4">
                     <div class="col-lg-4 position-relative align-self-start order-lg-last order-first">
-                        <img src="{{asset('front_end/assets/img/Amelkihalehu.jpg')}}" class="img-fluid" alt="">
+                        <img src="{{asset('front_end/assets/img/hero-img.png')}}" class="img-fluid" alt="">
                         <a href="https://www.youtube.com/watch?v=sFuwFhGcmGM" class="glightbox play-btn"></a>
                     </div>
 
                     <div class="col-lg-4 position-relative align-self-start order-lg-last order-first">
-                        <img src="{{asset('front_end/assets/img/Amelkihalehu.jpg')}}" class="img-fluid" alt="">
+                        <img src="{{asset('front_end/assets/img/youtube-play.jpg')}}" class="img-fluid" alt="">
                         <a href="https://www.youtube.com/watch?v=iXw7uKtANIo" class="glightbox play-btn"></a>
                     </div>
 

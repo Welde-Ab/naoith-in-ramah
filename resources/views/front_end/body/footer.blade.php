@@ -19,20 +19,20 @@
             <div class="col-lg-2 col-6 footer-links">
                 <h4>Useful Links</h4>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Services</a></li>
+                    <li><a href="{{route('home')}}" class='{{($route=='home')?'active':' '}}'>Home</a></li>
+                    <li><a href="{{route('about')}}" class='{{($route=='about')?'active':' '}}'>About us</a></li>
+                    <li><a href="{{route('prayers')}}" class='{{($route=='prayers')?'active':' '}}'> Prayers </a></li>
                 </ul>
             </div>
 
             <div class="col-lg-2 col-6 footer-links">
                 <h4>Our Services</h4>
                 <ul>
-                    <li><a href="#">Web Design</a></li>
-                    <li><a href="#">Web Development</a></li>
-                    <li><a href="#">Product Management</a></li>
-                    <li><a href="#">Marketing</a></li>
-                    <li><a href="#">Graphic Design</a></li>
+                    <li><a href="{{route('members')}}" class='{{($route=='members')?'active':' '}}'>Our members</a></li>
+                    <li><a href="{{route('testimonies')}}" class='{{($route=='testimonies')?'active':' '}}'>Testimonies</a></li>
+                    <li><a href="{{route('gallery')}}" class='{{($route=='gallery')?'active':' '}}'>Gallery</a></li>
+                    <li><a href="{{route('worships')}}" class='{{($route=='worships')?'active':' '}}'>Worships-Songs</a></li>
+                    <li><a href="{{route('sermons')}}" class='{{($route=='sermons')?'active':' '}}'> Sunday Sermons </a></li>
                 </ul>
             </div>
 

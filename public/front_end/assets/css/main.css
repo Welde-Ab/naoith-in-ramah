@@ -20,7 +20,8 @@
 :root {
   --color-default: #000000;
   --color-primary: #ff0000;
-  --color-secondary: #9d8605;
+  /*--color-secondary: #9d8605;*/
+    --color-secondary: #49be25;
 }
 
 /* Smooth scroll behavior */
@@ -139,7 +140,7 @@ section {
 
 .breadcrumbs .page-header:before {
   content: "";
-  background-color: rgba(14, 29, 52, 0.8);
+  background-color: #49be25;
   position: absolute;
   inset: 0;
 }
@@ -841,7 +842,7 @@ section {
 # Call To Action Section
 --------------------------------------------------------------*/
 .call-to-action {
-  background: linear-gradient(rgba(14, 29, 52, 0.6), rgba(14, 29, 52, 0.8)), url("../img/cta-bg.jpg") center center;
+  background: linear-gradient(rgba(14, 29, 52, 0.6), rgba(14, 29, 52, 0.8)), url("../img/call_to_action.jpg") center center;
   background-size: cover;
   padding: 100px 0;
 }

@@ -12,19 +12,19 @@ class GalleryCategoryController extends Controller
     {
         $categories = Gallery_Categories::with('galleries')->get();
 
-        return view('admin.gallery.gallery_categories', compact('categories'));
+        return view('categories.index', compact('categories'));
     }
 
     public function create()
     {
-        return view('admin.gallery.create_gallery_categories');
+        return view('gallery.categories.create');
     }
 
     public function store(Request $request)
     {
         $category = Gallery_Categories::create($request->all());
 
-        return redirect()->route('admin.gallery.gallery_categories')->with('success', 'Category created successfully.');
+        return redirect()->route('categories.index')->with('success', 'Category created successfully.');
     }
     public function show($id)
     {

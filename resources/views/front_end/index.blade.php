@@ -21,18 +21,17 @@
                         <p data-aos="fade-up" data-aos-delay="100"> Naioth that is translated as the dwelling place of prophets (1st Samuel 19:18-24), our congregation is an assembly of Christians filled by the Holy Spirit in this day and age. </p>
 
                         <div class="row gy-4" data-aos="fade-up" data-aos-delay="400">
-
                             <div class="col-lg-3 col-6">
                                 <div class="stats-item text-center w-100 h-100">
                                     <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1" class="purecounter"></span>
-                                    <p>Years in Ministry</p>
+                                    <p> Years in Ministry </p>
                                 </div>
                             </div><!-- End Stats Item -->
 
                             <div class="col-lg-3 col-6">
                                 <div class="stats-item text-center w-100 h-100">
                                     <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-                                    <p>Demo</p>
+                                    <p> Demo </p>
                                 </div>
                             </div><!-- End Stats Item -->
 
@@ -55,7 +54,7 @@
 
                     <!-- Replace with church logo -->
                     <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-                        <img src= "{{asset('assets/img/hero-img.svg')}}" class="img-fluid mb-3 mb-lg-0" alt="church logo">
+                        <img src= "{{asset('front_end/assets/img/naioth-logo-inverted.png')}}" class="img-fluid mb-3 mb-lg-0" alt="church logo">
                     </div>
 
                 </div>
@@ -79,9 +78,9 @@
                         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                             <div class="card">
                                 <div class="card-img">
-                                    <img src="{{asset('front_end/assets/img/storage-service.jpg')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('front_end/assets/img/sermons.jpg')}}" class="img-fluid" alt="">
                                 </div>
-                                <h3><a href="service-details.html" class="stretched-link">Sermons (Change Picture)</a></h3>
+                                <h3><a href="service-details.html" class="stretched-link"> Sermons </a></h3>
                                 <p>In our church we regularly learn the word of God for instruction, encouragement and strengtheining our faith.</p>
                             </div>
                         </div><!-- End Card Item -->
@@ -89,19 +88,19 @@
                         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                             <div class="card">
                                 <div class="card-img">
-                                    <img src="{{asset('front_end/assets/img/logistics-service.jpg')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('front_end/assets/img/testimonies.jpg')}}" class="img-fluid" alt="">
                                 </div>
-                                <h3><a href="service-details.html" class="stretched-link">Bible Study (Change Picture)</a></h3>
-                                <p>We throughly go through the different books of the bible by understanding their historical and literary context to find application in our lives.</p>
+                                <h3><a href="service-details.html" class="stretched-link"> Testimonies </a></h3>
+                                <p> Here we hear the works of the Lord through the testimonies of the members of our church. </p>
                             </div>
                         </div><!-- End Card Item -->
 
                         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                             <div class="card">
                                 <div class="card-img">
-                                    <img src="{{asset('front_end/assets/img/cargo-service.jpg')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('front_end/assets/img/worship.jpg')}}" class="img-fluid" alt="">
                                 </div>
-                                <h3><a href="service-details.html" class="stretched-link">Worship (Change Picture)</a></h3>
+                                <h3><a href="service-details.html" class="stretched-link"> Worship </a></h3>
                                 <p>Worshiping the Lord our God through music and hymns.</p>
                             </div>
                         </div><!-- End Card Item -->
@@ -109,9 +108,9 @@
                         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
                             <div class="card">
                                 <div class="card-img">
-                                    <img src="{{asset('front_end/assets/img/trucking-service.jpg')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('front_end/assets/img/prayer.jpg')}}" class="img-fluid" alt="">
                                 </div>
-                                <h3><a href="service-details.html" class="stretched-link">Prayer (Change Picture)</a></h3>
+                                <h3><a href="service-details.html" class="stretched-link"> Prayer </a></h3>
                                 <p>Coming to the throne of God to commune with our God and find Grace for our daily lives.</p>
                             </div>
                         </div><!-- End Card Item -->
@@ -119,9 +118,9 @@
                         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
                             <div class="card">
                                 <div class="card-img">
-                                    <img src="{{asset('front_end/assets/img/packaging-service.jpg')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('front_end/assets/img/exposition.jpg')}}" class="img-fluid" alt="">
                                 </div>
-                                <h3><a href="service-details.html" class="stretched-link">Expositions (Change Picture)</a></h3>
+                                <h3><a href="service-details.html" class="stretched-link"> Expositions </a></h3>
                                 <p> Expositions on Christian living, discipleship, etc.</p>
                             </div>
                         </div><!-- End Card Item -->
@@ -129,9 +128,9 @@
                         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
                             <div class="card">
                                 <div class="card-img">
-                                    <img src="{{asset('front_end/assets/img/warehousing-service.jpg')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('front_end/assets/img/baby_shower.jpg')}}" class="img-fluid" alt="">
                                 </div>
-                                <h3><a href="service-details.html" class="stretched-link">Other Collections</a></h3>
+                                <h3><a href="service-details.html" class="stretched-link"> Other Collections </a></h3>
                                 <p> Special Church events, birthdays, stories of our church members</p>
                             </div>
                         </div><!-- End Card Item -->
@@ -194,15 +193,13 @@
             <!-- ======= Call To Action Section ======= -->
             <section id="call-to-action" class="call-to-action">
                 <div class="container" data-aos="zoom-out">
-
                     <div class="row justify-content-center">
                         <div class="col-lg-8 text-center">
                             <h3>In a foreign land God is our Solace</h3>
-                            <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <a class="cta-btn" href="#">Call To Action</a>
+                            <p> We would like to invite you to come and serve the Lord Jesus Christ with us. You can also support our mission through prayers and financial/material support.</p>
+                            <a class="cta-btn" href="{{route('contact')}}" class='{{($route=='contact')?'active':' '}}'>Contact Us</a>
                             </dic>
                         </div>
-
                     </div>
             </section><!-- End Call To Action Section -->
 
@@ -213,13 +210,12 @@
                     <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
 
                         <div class="section-header">
-                            <span>Our Programs</span>
-                            <h2>Our Programs</h2>
-
+                            <span> Our Programs </span>
+                            <h2> Our Programs </h2>
                         </div>
 
                         <div class="col-md-5">
-                            <img src = "{{asset('front_end/assets/img/features-1.jpg')}}" class="img-fluid" alt="">
+                            <img src = "{{asset('front_end/assets/img/sunday.png')}}" class="img-fluid" alt="">
                         </div>
                         <div class="col-md-7">
                             <h3>Sunday we have our regular worship service.</h3>
@@ -236,7 +232,7 @@
 
                     <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
                         <div class="col-md-5 order-1 order-md-2">
-                            <img src = "{{asset('front_end/assets/img/features-2.jpg')}}" class="img-fluid" alt="">
+                            <img src = "{{asset('front_end/assets/img/group_prayer.jpg')}}" class="img-fluid" alt="">
                         </div>
                         <div class="col-md-7 order-2 order-md-1">
                             <h3>Every Tuesday we have group prayer </h3>
@@ -249,7 +245,7 @@
 
                     <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
                         <div class="col-md-5">
-                            <img src = "{{asset('front_end/assets/img/features-3.jpg')}}" class="img-fluid" alt="">
+                            <img src = "{{asset('front_end/assets/img/bible.jpg')}}" class="img-fluid" alt="">
                         </div>
                         <div class="col-md-7">
                             <h3>Every Saturday we have our Bible Study Session.</h3>
@@ -264,7 +260,7 @@
 
                     <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
                         <div class="col-md-5 order-1 order-md-2">
-                            <img src = "{{asset('front_end/assets/img/features-4.jpg')}}" class="img-fluid" alt="">
+                            <img src = "{{asset('front_end/assets/img/celebrations.jpg')}}" class="img-fluid" alt="">
                         </div>
                         <div class="col-md-7 order-2 order-md-1">
                             <h3>Birthdays, wedding anniversaries, graduations, welcome and farewell parties</h3>
@@ -292,15 +288,12 @@
 
                             <div class="swiper-slide">
                                 <div class="testimonial-item">
-                                    <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                                    <h3>Saul Goodman</h3>
-                                    <h4>Ceo &amp; Founder</h4>
-                                    <div class="stars">
-                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                                    </div>
+                                    <img src="{{asset('front_end/assets/img/testimonials/testimonials-1.jpg')}}" class="testimonial-img" alt="">
+                                    <h3>Kidus Tsegaye</h3>
+                                    <h4> Pastor </h4>
                                     <p>
                                         <i class="bi bi-quote quote-icon-left"></i>
-                                        Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                                        God has opened a door for us to minister in Japan fellow Ethiopians and to the Japanese people in General.
                                         <i class="bi bi-quote quote-icon-right"></i>
                                     </p>
                                 </div>
@@ -308,15 +301,12 @@
 
                             <div class="swiper-slide">
                                 <div class="testimonial-item">
-                                    <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                                    <h3>Sara Wilsson</h3>
-                                    <h4>Designer</h4>
-                                    <div class="stars">
-                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                                    </div>
+                                    <img src="{{asset('front_end/assets/img/testimonials/testimonials-2.jpg')}}" class="testimonial-img" alt="">
+                                    <h3> Salome Werede </h3>
+                                    <h4> Naiothian </h4>
                                     <p>
                                         <i class="bi bi-quote quote-icon-left"></i>
-                                        Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                                        Through Naoith in Ramah I have found the strength to continue in my faith and serve with my fellow brothers and sisters.
                                         <i class="bi bi-quote quote-icon-right"></i>
                                     </p>
                                 </div>
@@ -324,15 +314,12 @@
 
                             <div class="swiper-slide">
                                 <div class="testimonial-item">
-                                    <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                                    <h3>Jena Karlis</h3>
-                                    <h4>Store Owner</h4>
-                                    <div class="stars">
-                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                                    </div>
+                                    <img src="{{asset('front_end/assets/img/testimonials/testimonials-3.jpg')}}" class="testimonial-img" alt="">
+                                    <h3> Salome Werede </h3>
+                                    <h4> Naiothian </h4>
                                     <p>
                                         <i class="bi bi-quote quote-icon-left"></i>
-                                        Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                                        Through Naoith in Ramah I have found the strength to continue in my faith and serve with my fellow brothers and sisters.
                                         <i class="bi bi-quote quote-icon-right"></i>
                                     </p>
                                 </div>
@@ -340,15 +327,12 @@
 
                             <div class="swiper-slide">
                                 <div class="testimonial-item">
-                                    <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                                    <h3>Matt Brandon</h3>
-                                    <h4>Freelancer</h4>
-                                    <div class="stars">
-                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                                    </div>
+                                    <img src="{{asset('front_end/assets/img/testimonials/testimonials-4.jpg')}}" class="testimonial-img" alt="">
+                                    <h3> HelenBirhan  </h3>
+                                    <h4> Naiothian </h4>
                                     <p>
                                         <i class="bi bi-quote quote-icon-left"></i>
-                                        Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                                        Through Naoith in Ramah I have found the strength to continue in my faith and serve with my fellow brothers and sisters.
                                         <i class="bi bi-quote quote-icon-right"></i>
                                     </p>
                                 </div>
@@ -356,15 +340,12 @@
 
                             <div class="swiper-slide">
                                 <div class="testimonial-item">
-                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                                    <h3>John Larson</h3>
-                                    <h4>Entrepreneur</h4>
-                                    <div class="stars">
-                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                                    </div>
+                                    <img src="{{asset('front_end/assets/img/testimonials/testimonials-5.jpg')}}" class="testimonial-img" alt="">
+                                    <h3> Gelaye </h3>
+                                    <h4> Naiothian </h4>
                                     <p>
                                         <i class="bi bi-quote quote-icon-left"></i>
-                                        Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                                        Through Naoith in Ramah I have found the strength to continue in my faith and serve with my fellow brothers and sisters.
                                         <i class="bi bi-quote quote-icon-right"></i>
                                     </p>
                                 </div>

@@ -1,79 +1,80 @@
-<!DOCTYPE html>
-<html>
+@extends('front_end.body.links')
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
-    <link rel="stylesheet" href="{{asset('/freebie-4-bootstrap-gallery-templates/grid/gallery-grid.css')}}">
-</head>
+{{--Extends the contents from the links.blade.php file --}}
 
-<body>
+@section('main')
 
-<div class="container gallery-container">
+    @section('title')
+        Naioth in Ramah | Galleries
+    @endsection
 
-    <h1>Bootstrap 3 Gallery</h1>
+    @php
+        $route = Route::current()->getName();
+    @endphp
 
-    <p class="page-description text-center">Grid Layout With Zoom Effect</p>
+        <!-- ======= Hero Section ======= -->
 
-    <div class="tz-gallery">
+    <main id="main">
 
-        <div class="row">
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="{{asset('/freebie-4-bootstrap-gallery-templates/images/park.jpg')}}">
-                    <img src="{{asset('/freebie-4-bootstrap-gallery-templates/images/park.jpg')}}" alt="Park">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="{{asset('/freebie-4-bootstrap-gallery-templates/images/bridge.jpg')}}">
-                    <img src="{{asset('/freebie-4-bootstrap-gallery-templates/images/bridge.jpg')}}" alt="Park">
-                </a>
-            </div>
-            <div class="col-sm-12 col-md-4">
-                <a class="lightbox" href="{{asset('/freebie-4-bootstrap-gallery-templates/images/tunnel.jpg')}}">
-                    <img src="{{asset('/freebie-4-bootstrap-gallery-templates/images/tunnel.jpg')}}" alt="Park">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="{{asset('/freebie-4-bootstrap-gallery-templates/images/coast.jpg')}}">
-                    <img src="{{asset('/freebie-4-bootstrap-gallery-templates/images/coast.jpg')}}" alt="Park">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="{{asset('/freebie-4-bootstrap-gallery-templates/images/rails.jpg')}}">
-                    <img src="{{asset('/freebie-4-bootstrap-gallery-templates/images/rails.jpg')}}" alt="Park">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="{{asset('/freebie-4-bootstrap-gallery-templates/images/traffic.jpg')}}">
-                    <img src="{{asset('/freebie-4-bootstrap-gallery-templates/images/traffic.jpg')}}" alt="Park">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="{{asset('/freebie-4-bootstrap-gallery-templates/images/rocks.jpg')}}">
-                    <img src="{{asset('/freebie-4-bootstrap-gallery-templates/images/rocks.jpg')}}" alt="Park">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="{{asset('/freebie-4-bootstrap-gallery-templates/images/rocks.jpg')}}">
-                    <img src="{{asset('/freebie-4-bootstrap-gallery-templates/images/rocks.jpg')}}" alt="Park">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="{{asset('/freebie-4-bootstrap-gallery-templates/images/rocks.jpg')}}">
-                    <img src="{{asset('/freebie-4-bootstrap-gallery-templates/images/rocks.jpg')}}" alt="Park">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
+        <!-- ======= Services Section ======= -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
-<script>
-    baguetteBox.run('.tz-gallery');
-</script>
-</body>
-</html>
+
+        {{--                <ul>--}}
+        {{--                    @foreach ($categories->galleries as $gallery)--}}
+        {{--                        <li>{{ $gallery->name }}</li>--}}
+        {{--                    @endforeach--}}
+        {{--                </ul>--}}
+
+
+
+        <section id="service" class="services pt-0">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-header">
+                    {{--                    <span>Church Ministry</span>--}}
+                    <br>   <br>   <br>   <br>
+                    <h2>Church Ministry</h2>
+
+                </div>
+
+                <div class="row gy-4">
+
+                    @foreach ($categories as $category)
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="{{$category->category_image}}" class="img-fluid" alt="">
+                                </div>
+                                <h3>
+                                    <a href="{{route('gallery.category', ['category_id' => $category->id])}}" class="stretched-link">{{ $category->name }} (Change Picture)</a>
+                                </h3>
+                                {{--                                <p>{{ $category->description }}</p>--}}
+                                <p>{!! $category->description !!}</p>
+                            </div>
+                        </div>
+                    @endforeach
+
+
+
+
+                </div>
+
+
+                {{--                @foreach ($categories as $category)--}}
+                {{--                    <h3>{{$category->name}}</h3>--}}
+                {{--                    <p>{{$category->description}}</p>--}}
+
+                {{--                    @foreach ($category->galleries as $gallery)--}}
+                {{--                        <img src="{{$category->category_image}}" class="img-fluid" alt="">--}}
+                {{--                        <a href="{{route('gallery.category', $gallery->category_id)}}">{{$category->name}}</a>--}}
+                {{--                    @endforeach--}}
+                {{--                @endforeach--}}
+
+            </div>
+        </section><!-- End Services Section -->
+
+
+
+    </main><!-- End #main -->
+
+@endsection

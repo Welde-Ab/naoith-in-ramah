@@ -71,8 +71,6 @@ class ArticleController extends Controller
 
 
     public function DeleteArticle($id){
-
-
         Articles::findOrFail($id)->delete();
 
         $notification = array(

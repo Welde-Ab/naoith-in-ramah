@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Member;
+use App\Models\Testimonies;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
@@ -22,10 +24,27 @@ class FrontController extends Controller
         $categories = Category::with('galleries')->get();
 
 //        return view('admin.categories.index', compact('categories'));
-            return view('front_end.gallery_categories', compact('categories'));
+        return view('front_end.gallery_categories', compact('categories'));
 //        return view('front_end.gallery_categories');
     }
 
+    public function believe()
+    {
+        return view('front_end.about_menu.believe');
+    }
+
+    public function members()
+    {
+
+        $members = Member::latest()->get();
+        return view('front_end.about_menu.members',compact('members'));
+    }
+
+    public function testimonies()
+    {
+        $testimonies = Testimonies::latest()->get();
+        return view('front_end.resources_menu.testimonies',compact('testimonies'));
+    }
     public function worships()
     {
         return view('front_end.worships');
@@ -53,7 +72,7 @@ class FrontController extends Controller
 
     public function shorts()
     {
-        return view('front_end.resources_menu.teachings.short');
+        return view('front_end.resources_menu.teachings.shorts');
     }
 
     public function events()
@@ -70,16 +89,10 @@ class FrontController extends Controller
     {
         return view('front_end.contact');
     }
-
-    public function testimonies()
-    {
-        return view('front_end.resources_menu.testimonies');
-    }
-
     public function category($category_id){
 
-    $category = Category::where('id', $category_id)->get();
+        $category = Category::where('id', $category_id)->get();
 
         return view('front_end.gallery',compact('category'));
-}
+    }
 }

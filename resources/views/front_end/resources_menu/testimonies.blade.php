@@ -5,7 +5,7 @@
 @section('main')
 
     @section('title')
-        Naioth in Ramah | Prayers
+        Naioth in Ramah | Testimonies
     @endsection
 
     @php
@@ -42,23 +42,16 @@
                     <h2> Studio Recordings </h2>
                 </div>
 
-                <div class="row gy-4">
+                @foreach($testimonies as $item)
                     <div class="col-lg-4 position-relative align-self-start order-lg-last order-first">
-                        <img src="{{asset('front_end/assets/img/Amelkihalehu.jpg')}}" class="img-fluid" alt="">
-                        <a href="https://www.youtube.com/watch?v=sFuwFhGcmGM" class="glightbox play-btn"></a>
+                        <img src="{{asset('front_end/assets/img/hero-img.png')}}" class="img-fluid" alt="">
+                        <a href="{{$item->testimonies_name}}" class="glightbox play-btn"></a>
                     </div>
 
-                    <div class="col-lg-4 position-relative align-self-start order-lg-last order-first">
-                        <img src="{{asset('front_end/assets/img/Amelkihalehu.jpg')}}" class="img-fluid" alt="">
-                        <a href="https://www.youtube.com/watch?v=iXw7uKtANIo" class="glightbox play-btn"></a>
-                    </div>
+                @endforeach
 
-                    <div class="col-lg-4 position-relative align-self-start order-lg-last order-first">
-                        <img src="{{asset('front_end/assets/img/Amelkihalehu.jpg')}}" class="img-fluid" alt="">
-                        <a href="https://www.youtube.com/watch?v=sFuwFhGcmGM" class="glightbox play-btn"></a>
-                    </div>
 
-                </div>
+
 
                 <div class="container" data-aos="fade-up">
                     <div class="section-header">
@@ -82,6 +75,8 @@
                         </div>
 
                     </div>
+
+                </div></div>
 
         </section><!-- End About Us Section -->
 

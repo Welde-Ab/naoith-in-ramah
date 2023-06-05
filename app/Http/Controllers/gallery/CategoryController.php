@@ -19,14 +19,14 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
-        $test=dd($request);
-        $request->validate([
-            'name' => 'required|string|max:255|unique:categories,name',
-            'category_image' => 'required',
-        ],[
-            'name.required'=>'category name is required',
-            'category_image.required' =>'category image required'
-        ]);
+        //$test=dd($request); // Request is data sent from the form (dd means data-dump)
+//        $request->validate([
+//            'name' => 'required|string|max:255|unique:categories,name',
+//            'category_image' => 'required',
+//        ],[
+//            'name.required'=>'category name is required',
+//            'category_image.required' =>'category image required'
+//        ]);
         $category_image = $request->file('category_image');
 
         $name_gen = hexdec(uniqid()).'.'.$category_image->getClientOriginalExtension();  // 3434343443.jpg
@@ -46,8 +46,6 @@ class CategoryController extends Controller
             'alert-type' => 'success'
         );
         return redirect()->route('categories.index')->with($notification);
-
-
     }
 
     public function index()
