@@ -17,7 +17,7 @@
                 <div class="container position-relative">
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-6 text-center">
-                            <h2>Contact</h2>
+                            <h2>Contact Us</h2>
                             <p> We would love to hear from you. Contact us for any inquiries regarding our ministry, if you would like to support us and would love to come and attend our gatherings in person. </p>
                         </div>
                     </div>
