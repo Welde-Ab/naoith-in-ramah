@@ -286,7 +286,7 @@
 
                             <div class="swiper-slide">
                                 <div class="testimonial-item">
-                                    <img src="{{asset('front_end/assets/img/testimonials/testimonials-1.jpg')}}" class="testimonial-img" alt="">
+{{--                                    <img src="{{asset('front_end/assets/img/testimonials/testimonials-1.jpg')}}" class="testimonial-img" alt="">--}}
                                     <h3>Kidus Tsegaye</h3>
                                     <h4> Pastor </h4>
                                     <p>
@@ -299,7 +299,7 @@
 
                             <div class="swiper-slide">
                                 <div class="testimonial-item">
-                                    <img src="{{asset('front_end/assets/img/testimonials/testimonials-2.jpg')}}" class="testimonial-img" alt="">
+{{--                                    <img src="{{asset('front_end/assets/img/testimonials/testimonials-2.jpg')}}" class="testimonial-img" alt="">--}}
                                     <h3> Salome Werede </h3>
                                     <h4> Naiothian </h4>
                                     <p>
@@ -312,7 +312,7 @@
 
                             <div class="swiper-slide">
                                 <div class="testimonial-item">
-                                    <img src="{{asset('front_end/assets/img/testimonials/testimonials-3.jpg')}}" class="testimonial-img" alt="">
+{{--                                    <img src="{{asset('front_end/assets/img/testimonials/testimonials-3.jpg')}}" class="testimonial-img" alt="">--}}
                                     <h3> Salome Werede </h3>
                                     <h4> Naiothian </h4>
                                     <p>
@@ -325,7 +325,7 @@
 
                             <div class="swiper-slide">
                                 <div class="testimonial-item">
-                                    <img src="{{asset('front_end/assets/img/testimonials/testimonials-4.jpg')}}" class="testimonial-img" alt="">
+{{--                                    <img src="{{asset('front_end/assets/img/testimonials/testimonials-4.jpg')}}" class="testimonial-img" alt="">--}}
                                     <h3> HelenBirhan  </h3>
                                     <h4> Naiothian </h4>
                                     <p>
@@ -338,7 +338,7 @@
 
                             <div class="swiper-slide">
                                 <div class="testimonial-item">
-                                    <img src="{{asset('front_end/assets/img/testimonials/testimonials-5.jpg')}}" class="testimonial-img" alt="">
+{{--                                    <img src="{{asset('front_end/assets/img/testimonials/testimonials-5.jpg')}}" class="testimonial-img" alt="">--}}
                                     <h3> Gelaye </h3>
                                     <h4> Naiothian </h4>
                                     <p>

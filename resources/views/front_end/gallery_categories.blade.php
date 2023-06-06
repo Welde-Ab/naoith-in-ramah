@@ -68,9 +68,6 @@
                         </div>
                     @endforeach
 
-
-
-
                 </div>
 
 
@@ -87,8 +84,5 @@
             </div>
         </section><!-- End Services Section -->
 
-
-
     </main><!-- End #main -->
-
 @endsection
