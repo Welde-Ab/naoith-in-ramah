@@ -42,7 +42,7 @@
                     </ul>
                 </li>
                 <li><a href="{{route('contact')}}">Contact</a></li>
-                <li><a class="get-a-quote" href="get-a-quote.html">አማርኛ/English</a></li>
+                <li><a class="get-a-quote" href="{{route('contact')}}">አማርኛ/English</a></li>
             </ul>
         </nav><!-- .navbar -->
 

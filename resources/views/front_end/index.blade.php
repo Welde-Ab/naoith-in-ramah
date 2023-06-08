@@ -78,7 +78,7 @@
                                 <div class="card-img">
                                     <img src="{{asset('front_end/assets/img/sermons.jpg')}}" class="img-fluid" alt="">
                                 </div>
-                                <h3><a href="service-details.html" class="stretched-link"> Sermons </a></h3>
+                                <h3><a href="{{route('sermons')}}" class='{{($route=='sermons')?'active':' '}}' class="stretched-link"> Sermons </a></h3>
                                 <p>In our church we regularly learn the word of God for instruction, encouragement and strengtheining our faith.</p>
                             </div>
                         </div><!-- End Card Item -->
@@ -88,7 +88,7 @@
                                 <div class="card-img">
                                     <img src="{{asset('front_end/assets/img/testimonies.jpg')}}" class="img-fluid" alt="">
                                 </div>
-                                <h3><a href="service-details.html" class="stretched-link"> Testimonies </a></h3>
+                                <h3><a href="{{route('testimonies')}}" class='{{($route=='testimonies')?'active':' '}}' class="stretched-link"> Testimonies </a></h3>
                                 <p> Here we hear the works of the Lord through the testimonies of the members of our church. </p>
                             </div>
                         </div><!-- End Card Item -->
@@ -98,7 +98,7 @@
                                 <div class="card-img">
                                     <img src="{{asset('front_end/assets/img/worship.jpg')}}" class="img-fluid" alt="">
                                 </div>
-                                <h3><a href="service-details.html" class="stretched-link"> Worship </a></h3>
+                                <h3><a href="{{route('worships')}}" class='{{($route=='worships')?'active':' '}}' class="stretched-link"> Worship </a></h3>
                                 <p>Worshiping the Lord our God through music and hymns.</p>
                             </div>
                         </div><!-- End Card Item -->
@@ -108,7 +108,7 @@
                                 <div class="card-img">
                                     <img src="{{asset('front_end/assets/img/prayer.jpg')}}" class="img-fluid" alt="">
                                 </div>
-                                <h3><a href="service-details.html" class="stretched-link"> Prayer </a></h3>
+                                <h3><a href="{{route('prayers')}}" class='{{($route=='prayers')?'active':' '}}' class="stretched-link"> Prayer </a></h3>
                                 <p>Coming to the throne of God to commune with our God and find Grace for our daily lives.</p>
                             </div>
                         </div><!-- End Card Item -->
@@ -118,7 +118,7 @@
                                 <div class="card-img">
                                     <img src="{{asset('front_end/assets/img/exposition.jpg')}}" class="img-fluid" alt="">
                                 </div>
-                                <h3><a href="service-details.html" class="stretched-link"> Expositions </a></h3>
+                                <h3><a href="{{route('series')}}" class='{{($route=='series')?'active':' '}}' class="stretched-link"> Expositions </a></h3>
                                 <p> Expositions on Christian living, discipleship, etc.</p>
                             </div>
                         </div><!-- End Card Item -->
@@ -128,7 +128,7 @@
                                 <div class="card-img">
                                     <img src="{{asset('front_end/assets/img/baby_shower.jpg')}}" class="img-fluid" alt="">
                                 </div>
-                                <h3><a href="service-details.html" class="stretched-link"> Other Collections </a></h3>
+                                <h3><a href="{{route('others')}}" class='{{($route=='others')?'active':' '}}' class="stretched-link"> Other Collections </a></h3>
                                 <p> Special Church events, birthdays, stories of our church members</p>
                             </div>
                         </div><!-- End Card Item -->

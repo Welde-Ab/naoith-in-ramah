@@ -9,10 +9,11 @@
                 </a>
                 <p>We would like minister you and for you to minister to us. We are based in Japan</p>
                 <div class="social-links d-flex mt-4">
-                    <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                    <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                    <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+{{--                    <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>--}}
+{{--                    <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>--}}
+{{--                    <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>--}}
+                    <a href="https://www.youtube.com/@pastorkidustsegayeofficial3813" class="youtube"><i class="bi bi-youtube"></i></a>
+                    <a href="https://www.facebook.com/NaiothTheRamah" class="facebook"><i class="bi bi-facebook"></i></a>
                 </div>
             </div>
 
@@ -43,7 +44,7 @@
                     124-0014, 1-20-4 Katsushika City<br>
                     Japan <br><br>
                     <strong>Phone:</strong> +81 9091925271<br>
-                    <strong>Email:</strong> info@example.com<br>
+                    <strong>Email:</strong> kiduskkk@yahoo.com<br>
                 </p>
 
             </div>
@@ -53,7 +54,7 @@
 
     <div class="container mt-4">
         <div class="copyright">
-            &copy; Copyright <strong><span>Logis</span></strong>. All Rights Reserved
+            &copy; Copyright <strong><span> Happy Creatives </span></strong>. All Rights Reserved
         </div>
         <div class="credits">
             <!-- All the links in the footer should remain intact. -->
